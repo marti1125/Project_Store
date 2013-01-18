@@ -1,0 +1,22 @@
+#{extends 'admin.html' /}
+ 
+Welcome ${user}!
+
+<div id="main">
+    
+    <ul id="adminMenu">
+        <li class="${request.controller == 'Admin' ? 'selected' : ''}">
+            <a href="@{Admin.index()}">My Products</a>
+        </li>
+        #{secure.check 'admin'}
+            <li class="${request.controller == 'Products' ? 'selected' : ''}">
+                <a href="@{Products.list()}">Products</a>
+            </li>            
+            <li class="${request.controller == 'Users' ? 'selected' : ''}">
+                <a href="@{Users.list()}">Users</a>
+            </li>
+        #{/secure.check}
+    </ul>
+    
+    #{doLayout /} 
+</div>
