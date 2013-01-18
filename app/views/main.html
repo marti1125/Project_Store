@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <title>#{get 'title' /}</title>
@@ -13,11 +12,20 @@
         #{get 'moreScripts' /}
     </head>
     <body>
-        <ul id="tools">
-            <li>
-                <a href="@{Admin.index()}">Log in to write something</a>
-            </li>
-        </ul>
+        <div class="content">
+            <div class="row">
+                <div class="span12">
+                    <h1>Cosmeticos Azucena</h1>
+                </div>
+                <div class="span12">
+                    <ul id="tools">
+                        <li>
+                            <a href="@{Admin.index()}">Ingreso al Sistema</a>
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+        </div>        
         #{doLayout /}
     </body>
 </html>

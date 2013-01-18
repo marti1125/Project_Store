@@ -3,21 +3,23 @@
     <head>
         <title>Administration</title>		
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        #{get 'moreStyles' /}	
-        <link rel="stylesheet" type="text/css" media="screen" 
-                href="@{'/public/stylesheets/main.css'}" />
-        <link rel="shortcut icon" type="image/png" 
-                href="@{'/public/images/favicon.png'}" />        
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap-responsive.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@{'/public/javascripts/jquery.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/bootstrap.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /}       
     </head>
     <body id="admin">
         
         <div id="header">
             <div id="logo">
-                yabe. <span>administration</span>
+                Cosmeticos Azucena <span>Panel de Control</span>
             </div>
             <ul id="tools">
                 <li>
-                    <a href="@{Secure.logout()}">Log out</a>
+                    <a href="@{Secure.logout()}">Salir</a>
                 </li>
             </ul>
         </div>
@@ -27,9 +29,8 @@
         </div>
         
         <p id="footer">
-            Yabe is a (not so) powerful blog engine built with the 
-            <a href="http://www.playframework.org">Play framework</a>
-            as a tutorial application.
+            Cosmeticos Azucena ha sido construido con
+            <a href="http://www.playframework.org">Play framework</a>            
         </p>
         
     </body>

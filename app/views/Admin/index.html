@@ -6,17 +6,16 @@ Welcome ${user}!
     
     <ul id="adminMenu">
         <li class="${request.controller == 'Admin' ? 'selected' : ''}">
-            <a href="@{Admin.index()}">My Products</a>
+            <a href="@{Admin.index()}">Mis Productos</a>
         </li>
         #{secure.check 'admin'}
             <li class="${request.controller == 'Products' ? 'selected' : ''}">
-                <a href="@{Products.list()}">Products</a>
+                <a href="@{Products.list()}">Productos</a>
             </li>            
             <li class="${request.controller == 'Users' ? 'selected' : ''}">
-                <a href="@{Users.list()}">Users</a>
+                <a href="@{Users.list()}">Usuarios</a>
             </li>
         #{/secure.check}
-    </ul>
-    
-    #{doLayout /} 
+    </ul>   
+     
 </div>
