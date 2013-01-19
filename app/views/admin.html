@@ -3,13 +3,15 @@
     <head>
         <title>Administration</title>		
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap.css'}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap-responsive.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/foundation.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/app.css'}">
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
         <script src="@{'/public/javascripts/jquery.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        <script src="@{'/public/javascripts/bootstrap.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        #{get 'moreScripts' /}       
+        <script src="@{'/public/javascripts/modernizr.foundation.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/foundation.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/app.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /}      
     </head>
     <body id="admin">
         
