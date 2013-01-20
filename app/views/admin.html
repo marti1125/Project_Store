@@ -4,6 +4,7 @@
         <title>Administration</title>		
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/foundation.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/general_foundicons.css'}">
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/app.css'}">
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
@@ -15,12 +16,13 @@
     </head>
     <body>
         <div class="row">
-            <div class="twelve columns">
+            <div class="eleven columns">
                 <h2>Cosmeticos Azucena - <span>Panel de Control</span></h2>
             </div>
-            <div class="one columns offset-by-ten">
-                <a href="@{Secure.logout()}">Salir</a>
-            </div>
+            <div class="one columns">
+                <br/><br/>
+                <i class="foundicon-left-arrow">&nbsp;</i><a href="@{Secure.logout()}">Salir</a>
+            </div>            
             <div class="twelve columns">
                 #{doLayout /}
             </div>
