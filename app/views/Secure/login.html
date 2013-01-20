@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>#{get 'title' /}</title>
-        <meta charset="${_response_encoding}">
+        <title>Administration</title>       
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/foundation.css'}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/general_foundicons.css'}">
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/app.css'}">
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
@@ -12,20 +11,28 @@
         <script src="@{'/public/javascripts/modernizr.foundation.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         <script src="@{'/public/javascripts/foundation.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         <script src="@{'/public/javascripts/app.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        #{get 'moreScripts' /} 
+        #{get 'moreScripts' /}      
     </head>
-    <body>        
+    <body>
         <div class="row">
-            <div class="twelve columns">
-                <br/><br/><br/>
-                 <p class="center" ><img src="@{'/public/images/cos.png'}"/></p>
-                <h1 class="center">Cosmeticos Azucena</h1>
-                <h3 class="center">¡Muy pronto!</h3>
+            <br/><br/>
+            <div class="five columns offset-by-three">
+                #{form @authenticate()}
+                <p>
+                    <label for="username">User name: </label> <input type="text" name="username" id="username" maxlength="30"   value="${params.username}" />
+                </p>
+                <p>
+                    <label for="password">Password: </label> <input type="password" name="password" id="password" maxlength="30"/>
+                </p>
+                <p>
+                    <input class="button" type="submit" id="signin" value="Log in" />
+                </p>
+                #{/form}
             </div>
-            <div class="twelve columns">
-                <p class="center" ><i class="foundicon-settings">&nbsp;</i><a href="@{Admin.index()}">Ingreso al Sistema</a></p>
-            </div>                
-        </div>               
-        #{doLayout /}
+        </div>
+        
     </body>
 </html>
+
+
+
