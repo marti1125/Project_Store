@@ -18,6 +18,7 @@ public class User extends Model{
 	
 	public String fullname;
 	public boolean isAdmin;
+	public boolean isWebMaster;
 	
 	public User(String email, String password, String fullname){
 		this.email = email;
