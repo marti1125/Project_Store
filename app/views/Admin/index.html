@@ -1,8 +1,25 @@
 #{extends 'admin.html' /}
  
-Welcome ${user}!
+<h3>¡Bienvenido ${user}!</h3>
 
-<div id="main">
+<!-- Basic Needs -->
+<nav class="top-bar">
+  <ul>
+    <li class="name"><h1><a href="@{Admin.index()}">Mis Productos</a></h1></li>
+    <li class="toggle-topbar"><a href="#"></a></li>
+  </ul>
+  <section>
+    <ul class="left">
+      <li><a href="@{Products.list()}">Productos</a></li>
+    </ul>
+
+    <ul class="left">
+      <li><a href="@{Users.list()}">Usuarios</a></li>
+    </ul>
+  </section>
+</nav>
+
+<!--div id="main">
     
     <ul id="adminMenu">
         <li class="${request.controller == 'Admin' ? 'selected' : ''}">
@@ -18,4 +35,4 @@ Welcome ${user}!
         #{/secure.check}
     </ul>   
      
-</div>
+</div-->

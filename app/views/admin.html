@@ -13,27 +13,20 @@
         <script src="@{'/public/javascripts/app.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         #{get 'moreScripts' /}      
     </head>
-    <body id="admin">
-        
-        <div id="header">
-            <div id="logo">
-                Cosmeticos Azucena <span>Panel de Control</span>
+    <body>
+        <div class="row">
+            <div class="twelve columns">
+                <h2>Cosmeticos Azucena - <span>Panel de Control</span></h2>
             </div>
-            <ul id="tools">
-                <li>
-                    <a href="@{Secure.logout()}">Salir</a>
-                </li>
-            </ul>
-        </div>
-        
-        <div id="main">
-            #{doLayout /} 
-        </div>
-        
-        <p id="footer">
-            Cosmeticos Azucena ha sido construido con
-            <a href="http://www.playframework.org">Play framework</a>            
-        </p>
-        
+            <div class="one columns offset-by-ten">
+                <a href="@{Secure.logout()}">Salir</a>
+            </div>
+            <div class="twelve columns">
+                #{doLayout /}
+            </div>
+            <div class="twelve columns">
+                <p>Cosmeticos Azucena ha sido construido con <a href="http://www.playframework.org">Play framework</a></p>
+            </div>
+        </div> 
     </body>
 </html>
