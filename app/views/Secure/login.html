@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Administration</title>       
+        <title>Ingreso al Sistema</title>       
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/foundation.css'}">
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/app.css'}">
         #{get 'moreStyles' /}
-        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.ico'}">
         <script src="@{'/public/javascripts/jquery.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         <script src="@{'/public/javascripts/modernizr.foundation.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         <script src="@{'/public/javascripts/foundation.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
@@ -14,15 +14,21 @@
         #{get 'moreScripts' /}      
     </head>
     <body>
-        <div class="row">
+        <div class="row">            
             <br/><br/>
-            <div class="five columns offset-by-three">
+            <div class="five columns offset-by-three">                
                 #{form @authenticate()}
+                #{if flash.error || error}
+                <div class="alert-box alert">
+                  Usuario o Contraseña incorrecto
+                  <a href="" class="close">&times;</a>
+                </div>
+                #{/if}
                 <p>
-                    <label for="username">User name: </label> <input type="text" name="username" id="username" maxlength="30"   value="${params.username}" />
+                    <label for="username">Usuario: </label> <input type="text" name="username" id="username" maxlength="30"   value="${params.username}" />
                 </p>
                 <p>
-                    <label for="password">Password: </label> <input type="password" name="password" id="password" maxlength="30"/>
+                    <label for="password">Contraseña: </label> <input type="password" name="password" id="password" maxlength="30"/>
                 </p>
                 <p>
                     <input class="button" type="submit" id="signin" value="Log in" />
