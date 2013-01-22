@@ -1,19 +1,21 @@
 #{extends 'otherpage.html' /}
-<h1>email</h1>
+#{set title:'Contáctenos' /}
+
+<h3>¡Póngase en contacto!</h3>
+<p>
+Nos encantaría saber de usted. Cualquiera puede llegar a nosotros como un todo, y uno de los miembros de nuestro equipo se pondrá en contacto con usted impresionante, o si usted tiene un problema específico de llegar a uno de nuestro personal. Nos encanta recibir correo electrónico durante todo el día todos los días.
+</p>
 #{form @contact()}
-#{if flash.error || error}
-<div class="alert-box alert">
-  No se pudo enviar mensaje
-  <a href="" class="close">&times;</a>
-</div>
-#{/if}
-<p>
-    <label for="username">Email: </label> <input type="text" name="address" id="address" maxlength="30"   value="${params.address}" />
-</p>
-<p>
-    <label for="password">Mensaje: </label><textarea id="message" name="message">${params.message}</textarea>
-</p>
-<p>
-    <input class="button" type="submit" id="send" value="send" />
-</p>
+<fieldset>
+    <legend>Contáctenos</legend>	
+	<p>
+	    <label class="inline" for="username">Email: </label> <input type="text" name="address" id="address" maxlength="30"   value="${params.address}" />
+	</p>
+	<p>
+	    <label class="inline" for="password">Mensaje: </label><textarea id="message" name="message">${params.message}</textarea>
+	</p>
+	<p>
+	    <input class="button" type="submit" id="send" value="Enviar" />
+	</p>
+</fieldset>
 #{/form}

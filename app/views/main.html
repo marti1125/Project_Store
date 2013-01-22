@@ -14,33 +14,18 @@
         <script src="@{'/public/javascripts/app.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         #{get 'moreScripts' /} 
     </head>
-    <body>        
-        <!--div class="row">
-            <div class="twelve columns">
-                <br/><br/><br/>
-                 <p class="center" ><img src="@{'/public/images/cos.png'}"/></p>
-                <h1 class="center">Cosmeticos Azucena</h1>
-                <h3 class="center">¡Muy pronto!</h3>
-            </div>
-            <div class="twelve columns">
-                <p class="center" ><i class="foundicon-settings">&nbsp;</i><a href="@{Admin.index()}">Ingreso al Sistema</a></p>
-            </div>                
-        </div>               
-        #{doLayout /}
-        -->
-        <!-- Nav and Banner -->
-
+    <body>
         <div class="row">
             <div class="twelve columns">
                 <nav class="top-bar">
                     <section>
                         <ul class="left">
                             <li>
-                                <a href="#">Inicio</a>
+                                <a href="@{Application.index()}">Inicio</a>
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="#">Contáctenos</a>
+                                <a href="@{Application.contact()}">Contáctenos</a>
                             </li>
                             <li class="divider"></li>                                              
                         </ul>
@@ -127,7 +112,7 @@
                             <p>We'd love to hear from you, you attractive person you.</p>
                         </div>
                         <div class="three columns">
-                            <a href="@{Application.contact()}" class="radius button right">Contact Us</a>
+                            <a href="@{Application.contact()}" class="radius button right">Contáctenos</a>
                         </div>
                     </div>
                 </div>
@@ -144,10 +129,10 @@
                     <div class="six columns">
                         <ul class="link-list right">
                             <li>
-                                <a href="#">Link 1</a>
+                                <a href="@{Application.index()}">Inicio</a>
                             </li>
                             <li>
-                                <a href="#">Link 2</a>
+                                <a href="@{Application.contact()}">Contáctenos</a>
                             </li>
                             <li>
                                 <a href="#">Link 3</a>
@@ -169,7 +154,5 @@
                 </div>
             </div>
         </footer>
-
-
     </body>
 </html>

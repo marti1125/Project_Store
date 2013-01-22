@@ -14,6 +14,84 @@
         #{get 'moreScripts' /} 
     </head>
     <body>
-        #{doLayout /}
+        <!-- Nav -->
+        <div class="row">
+            <div class="twelve columns">
+                <nav class="top-bar">
+                    <section>
+                        <ul class="left">
+                            <li>
+                                <a href="@{Application.index()}">Inicio</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="@{Application.contact()}">Contáctenos</a>
+                            </li>
+                            <li class="divider"></li>                                              
+                        </ul>
+                        <ul class="right">
+                            <li class="divider"></li>
+                            <li>
+                                <a href="@{Admin.index()}">Login</a>
+                            </li>
+                        </ul>
+                    </section>
+                </nav>                
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="row">
+                <div class="nine columns">
+                    #{doLayout /}
+                </div>
+                <div class="three columns">
+                    <h5>Map</h5>
+                    <p>
+                    <a href="" data-reveal-id="mapModal"><img src="http://placehold.it/400x280" /></a><br />
+                    <a href="" data-reveal-id="mapModal">View Map</a>
+                    </p>
+                    <p>
+                    123 Awesome St.<br />
+                    Barsoom, MA 95155
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="row">
+            <div class="twelve columns">
+                <hr />
+                <div class="row">
+                    <div class="six columns">
+                        <p>&copy; Copyright no one at all. Go to town.</p>
+                    </div>
+                    <div class="six columns">
+                        <ul class="link-list right">
+                            <li>
+                                <a href="@{Application.index()}">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="@{Application.contact()}">Contáctenos</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 4</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 5</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 6</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 7</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>       
     </body>
 </html>
