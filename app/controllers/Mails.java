@@ -18,7 +18,7 @@ public class Mails extends Mailer{
 			email.setSubject("Consulta");
 			email.setMsg(message);
 			Mail.send(email);			
-			System.out.println("Mensaje Enviado");
+			System.out.println("Send message was successful");
 			
 		} catch (Exception e) {
 			System.out.println("Error...");

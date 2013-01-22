@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/foundation.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/general_foundicons.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/app.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.ico'}">
+        <script src="@{'/public/javascripts/jquery.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/modernizr.foundation.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/foundation.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/app.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /} 
+    </head>
+    <body>
+        #{doLayout /}
+    </body>
+</html>
