@@ -11,3 +11,4 @@ email=Email
 password=Password
 fullname=Full name
 isAdmin=User is admin
+isWebMaster = User is WebMaster
