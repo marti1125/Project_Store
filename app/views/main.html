@@ -3,155 +3,72 @@
     <head>
         <title>#{get 'title' /}</title>
         <meta charset="${_response_encoding}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/foundation.css'}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/general_foundicons.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap-responsive.css'}">
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/app.css'}">
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.ico'}">
         <script src="@{'/public/javascripts/jquery.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        <script src="@{'/public/javascripts/modernizr.foundation.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        <script src="@{'/public/javascripts/foundation.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/bootstrap.js'}" type="text/javascript" charset="${_response_encoding}"></script>        
         <script src="@{'/public/javascripts/app.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         #{get 'moreScripts' /} 
     </head>
     <body>
+    <div class="container">
         <div class="row">
-            <div class="twelve columns">
-                <nav class="top-bar">
-                    <section>
-                        <ul class="left">
-                            <li>
-                                <a href="@{Application.index()}">Inicio</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="@{Application.products()}">Productos</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="@{Application.suppliers()}">Proveedores</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="@{Application.contact()}">Contáctenos</a>
-                            </li>
-                            <li class="divider"></li>                                              
-                        </ul>
-                        <ul class="right">
-                            <li class="divider"></li>
-                            <li>
-                                <a href="@{Admin.index()}">Login</a>
-                            </li>
-                        </ul>
-                    </section>
-                </nav>
-                <!-- Main Banner Image - place in a paragraph to enforce the modular scale
-                spacing -->
-                <p>
-                    <img src="http://placehold.it/1000x400&text=[banner img]" />
-                </p>
+            <br/>
+            <div class="span12">                
+               <ul class="nav nav-tabs">
+                    <li>
+                        <a href="@{Application.index()}">Inicio</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="@{Application.products()}">Productos</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="@{Application.suppliers()}">Proveedores</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="@{Application.contact()}">Contáctenos</a>
+                    </li>
+                    <li>
+                        <a href="@{Admin.index()}">Login</a>
+                    </li>
+                    <li class="divider"></li>                                              
+                </ul>                
             </div>
         </div>
         <!-- End Nav and Banner -->
         <!-- Main Content Section -->
         <div class="row">
-            <div class="eight columns">
-                
-        <h4>This is a content section.</h4>
-
-                <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo,
-                    chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in
-                    labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.
-                    Boudin aliqua adipisicing rump corned beef.</p>
-                <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo,
-                    chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in
-                    labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.
-                    Boudin aliqua adipisicing rump corned beef.</p>
-                <p>
-                    <a href="#" class="secondary small button">Next Page &rarr;</a>
-                </p>
-            </div>
-            <div class="four columns">
-                <!-- Gallery sidebar with a block grid. Note: block grid items should
-                be the same size for optimal results -->
-                <ul class="block-grid three-up">
-                    <li>
-                        <a href="#">
-                            <img src="http://placehold.it/120x120" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://placehold.it/120x120" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://placehold.it/120x120" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://placehold.it/120x120" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://placehold.it/120x120" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://placehold.it/120x120" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Call to Action Panel -->
-        <div class="row">
-            <div class="twelve columns">
-                <div class="panel">
-                    
-        <h4>Get in touch!</h4>
-
-                    <div class="row">
-                        <div class="nine columns">
-                            <p>We'd love to hear from you, you attractive person you.</p>
-                        </div>
-                        <div class="three columns">
-                            <a href="@{Application.contact()}" class="radius button right">Contáctenos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            #{doLayout /}
         </div>
         <!-- Footer -->
+        <hr />
         <footer class="row">
-            <div class="twelve columns">
-                <hr />
-                <div class="row">
-                    <div class="six columns">
-                        <p>&copy; Copyright no one at all. Go to town.</p>
-                    </div>
-                    <div class="six columns">
-                        <ul class="link-list right">
-                            <li>
-                                <a href="@{Application.index()}">Inicio</a>
-                            </li>
-                            <li>
-                                <a href="@{Application.products()}">Productos</a>
-                            </li>
-                            <li>
-                                <a href="@{Application.suppliers()}">Proveedores</a>
-                            </li>
-                            <li>
-                                <a href="@{Application.contact()}">Contáctenos</a>
-                            </li>  
-                        </ul>
-                    </div>
-                </div>
+            <div class="span4">
+                 <p>&copy; Copyright no one at all. Go to town.</p>
+            </div>
+            <div class="span8">                
+                <ul class="nav nav-pills">
+                     <li>
+                        <a href="@{Application.index()}">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="@{Application.products()}">Productos</a>
+                    </li>
+                    <li>
+                        <a href="@{Application.suppliers()}">Proveedores</a>
+                    </li>
+                    <li>
+                        <a href="@{Application.contact()}">Contáctenos</a>
+                    </li> 
+                </ul>                
             </div>
         </footer>
+    </div>
     </body>
 </html>
