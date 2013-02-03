@@ -1,45 +1,36 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Ingreso al Sistema</title>       
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap.css'}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap-responsive.css'}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/app.css'}">
-        #{get 'moreStyles' /}
-        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.ico'}">
-        <script src="@{'/public/javascripts/jquery.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        <script src="@{'/public/javascripts/bootstrap.js'}" type="text/javascript" charset="${_response_encoding}"></script>        
-        <script src="@{'/public/javascripts/app.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        #{get 'moreScripts' /}      
-    </head>
-    <body>
-    <div class="container">
-        <div class="row">            
-            <br/><br/>
-            <div class="span5">                
-                #{form @authenticate()}
-                #{if flash.error || error}
-                <div class="alert-box alert">
-                  Usuario o Contraseña incorrecto
-                  <a href="" class="close">&times;</a>
-                </div>
-                #{/if}
-                <p>
-                    <label for="username">Usuario: </label> <input type="text" name="username" id="username" maxlength="30" value="${params.username}" required />
-                </p>
-                <p>
-                    <label for="password">Contraseña: </label> <input type="password" name="password" id="password" maxlength="30" required />
-                </p>
-                <p>
-                    <input class="button" type="submit" id="signin" value="Log in" />
-                </p>
-                #{/form}
+#{extends 'simple.html' /}
+
+<div id="login">
+	
+	<h1>&{'secure.title'}</h1>
+		
+	#{form @authenticate()}
+		
+		#{if flash.error}
+			<div class="alert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                Usuario o Contraseña incorrecto                  
             </div>
-        </div>
-    </div> 
-    </body>
-</html>
-
-
-
+		#{/if}
+		#{if flash.success}
+			<p class="success">
+				&{flash.success}
+			</p>
+		#{/if}
+	   
+        <p>
+            <label for="username">Usuario: </label> <input type="text" name="username" id="username" maxlength="30" value="${flash.username}" required />
+        </p>
+        <p>
+            <label for="password">Contraseña: </label> <input type="password" name="password" id="password" maxlength="30" required />
+        </p>
+        <p>
+            <label class="checkbox">
+                <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} /> Recuerdame
+            </label>                     
+        </p>
+        <p>
+            <input class="btn" type="submit" id="signin" value="Ingresar" />
+        </p>		
+	#{/form}
+</div>
