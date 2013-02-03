@@ -1,10 +1,11 @@
 #{extends 'simple.html' /}
+#{set title:'Login' /}
+
+<div class="container">
 
 <div id="login">
-	
-	<h1>&{'secure.title'}</h1>
 		
-	#{form @authenticate()}
+	#{form @authenticate(), class:'form-signin' }
 		
 		#{if flash.error}
 			<div class="alert">
@@ -17,12 +18,13 @@
 				&{flash.success}
 			</p>
 		#{/if}
+        <h3 class="form-signin-heading">Por favor, identifíquese</h3>
 	   
         <p>
-            <label for="username">Usuario: </label> <input type="text" name="username" id="username" maxlength="30" value="${flash.username}" required />
+            <input placeholder="Usuario" class="input-block-level" type="text" name="username" id="username" maxlength="30" value="${flash.username}" required />
         </p>
         <p>
-            <label for="password">Contraseña: </label> <input type="password" name="password" id="password" maxlength="30" required />
+            </label> <input placeholder="Contraseña" class="input-block-level" type="password" name="password" id="password" maxlength="30" required />
         </p>
         <p>
             <label class="checkbox">
@@ -30,7 +32,9 @@
             </label>                     
         </p>
         <p>
-            <input class="btn" type="submit" id="signin" value="Ingresar" />
+            <input class="btn btn-large btn-primary" type="submit" id="signin" value="Ingresar" />
         </p>		
 	#{/form}
 </div>
+
+ </div> <!-- /container -->
