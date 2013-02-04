@@ -1,46 +1,16 @@
 #{extends 'admin.html' /}
+#{set title:'Panel de Control' /}
  
 <h3>¡Bienvenido ${user}!</h3>
 
-<!-- Basic Needs -->
-<nav class="top-bar">
-  <ul>
-    <li class="name"><h1><a href="@{Admin.index()}">Mis Productos</a></h1></li>
-    <li class="toggle-topbar"><a href="#"></a></li>
-  </ul>
-  <section>
-    <ul class="left">
+<div class="navbar">
+  <div class="navbar-inner">    
+    <ul class="nav">
+      <li class="active"><a class="brand" href="@{Admin.index()}">Inicio</a></li>
       <li><a href="@{Products.list()}">Productos</a></li>
-    </ul>
-
-    <ul class="left">
       <li><a href="@{Users.list()}">Usuarios</a></li>
-    </ul>
-
-    <ul class="left">
       <li><a href="@{ProductFronts.list()}">Productos Frontend</a></li>
-    </ul>
-
-    <ul class="left">
       <li><a href="@{SupplierFronts.list()}">Proveedores Frontend</a></li>
     </ul>
-  </section>
-</nav>
-
-<!--div id="main">
-    
-    <ul id="adminMenu">
-        <li class="${request.controller == 'Admin' ? 'selected' : ''}">
-            <a href="@{Admin.index()}">Mis Productos</a>
-        </li>
-        #{secure.check 'admin'}
-            <li class="${request.controller == 'Products' ? 'selected' : ''}">
-                <a href="@{Products.list()}">Productos</a>
-            </li>            
-            <li class="${request.controller == 'Users' ? 'selected' : ''}">
-                <a href="@{Users.list()}">Usuarios</a>
-            </li>
-        #{/secure.check}
-    </ul>   
-     
-</div-->
+  </div>
+</div>

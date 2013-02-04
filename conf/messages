@@ -1,5 +1,6 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
+Administration = Panel de Control
 secure.username=Your email:
 secure.password=Your password:
 secure.signin=Log in now
@@ -12,3 +13,5 @@ password=Password
 fullname=Full name
 isAdmin=User is admin
 isWebMaster = User is WebMaster
+Products = Productos
+Add Product = Agregar Producto
