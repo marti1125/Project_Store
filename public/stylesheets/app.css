@@ -1,7 +1,5 @@
 body {	
 	padding-bottom: 40px;
-	background-color: #f5f5f5;
-	color: #5a5a5a;
 }
 
 .login {
@@ -46,6 +44,7 @@ body {
       margin-top: 20px;
       margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
     }
+
     .navbar-wrapper .navbar {
 
     }
@@ -75,8 +74,6 @@ body {
     .navbar .btn-navbar {
       margin-top: 10px;
     }
-
-
 
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
@@ -209,4 +206,13 @@ body {
         line-height: 1.5;
       }
 
+    }
+
+    #menup {
+      padding-top: 20px;
+      margin-bottom: 50px;      
+    }
+
+    #menupp {
+      background-color: #181818 !important;
     }

@@ -35,10 +35,10 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="@{Application.index()}">Inicio</a></li>
-              <li><a href="@{Application.products()}">Productos</a></li>
+              <!--li><a href="@{Application.products()}">Productos</a></li>
               <li><a href="@{Application.suppliers()}">Proveedores</a></li>
               <li><a href="@{Application.contact()}">Contáctenos</a></li>
-              <li><a href="/login">Login</a></li>              
+              <li><a href="/login">Login</a></li-->              
             </ul>
           </div><!--/.nav-collapse -->
         </div><!-- /.navbar-inner -->
@@ -55,13 +55,12 @@
           <img src="@{'/public/images/slide-01.jpg'}" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+              <h1>Bienvenidos</h1>
+              <p class="lead">Cosmeticos Azucena donde encontraras los mejores productos de belleza.</p>
             </div>
           </div>
         </div>
-        <div class="item">
+        <!--div class="item">
           <img src="@{'/public/images/slide-02.jpg'}" alt="">
           <div class="container">
             <div class="carousel-caption">
@@ -80,28 +79,23 @@
               <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
             </div>
           </div>
-        </div>
+        </div-->
       </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
+      <!--a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a-->
+    </div>
+    #{doLayout /}
 
-
-
-    <div class="container">
-        <!-- Main Content Section -->
-        <div class="row">
-            #{doLayout /}
-        </div>
+    <div class="container">        
         <!-- Footer -->
         <hr />
         <div class="row">
             <div class="span12">                              
                 <ul class="nav nav-pills">
-                     <li>
+                    <li>
                         <a href="@{Application.index()}">Inicio</a>
                     </li>
-                    <li>
+                    <!--li>
                         <a href="@{Application.products()}">Productos</a>
                     </li>
                     <li>
@@ -109,7 +103,7 @@
                     </li>
                     <li>
                         <a href="@{Application.contact()}">Contáctenos</a>
-                    </li> 
+                    </li--> 
                 </ul>                                             
             </div>
         </div>
