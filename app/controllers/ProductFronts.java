@@ -3,7 +3,7 @@ package controllers;
 import play.*;
 import play.mvc.*;
 
-@Check("admin")
+@Check("webmaster")
 @With(Secure.class)
 public class ProductFronts extends CRUD{
 

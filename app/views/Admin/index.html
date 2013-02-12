@@ -1,16 +1,41 @@
 #{extends 'admin.html' /}
 #{set title:'Panel de Control' /}
- 
-<h3>¡Bienvenido ${user}!</h3>
 
-<div class="navbar">
-  <div class="navbar-inner">    
-    <ul class="nav">
-      <li class="active"><a class="brand" href="@{Admin.index()}">Inicio</a></li>
-      <li><a href="@{Products.list()}">Productos</a></li>
-      <li><a href="@{Users.list()}">Usuarios</a></li>
-      <li><a href="@{ProductFronts.list()}">Productos Frontend</a></li>
-      <li><a href="@{SupplierFronts.list()}">Proveedores Frontend</a></li>
-    </ul>
-  </div>
+#{secure.check "admin"}
+<div class="container">
+	<div class="row">
+		<div class="span12">
+		<h3>¡Bienvenido ${user}!</h3>
+			<div class="navbar">
+			  <div class="navbar-inner">    
+			    <ul class="nav">
+			      <li class="active"><a class="brand" href="@{Admin.index()}">Inicio</a></li>
+			      <li><a href="@{Products.list()}">Productos</a></li>
+			      <li><a href="@{Users.list()}">Usuarios</a></li>
+			      <li><a href="@{ProductFronts.list()}">Productos Frontend</a></li>
+			      <li><a href="@{SupplierFronts.list()}">Proveedores Frontend</a></li>
+			    </ul>
+			  </div>
+			</div>
+		</div>
+	</div>
 </div>
+#{/secure.check}
+#{secure.check "webmaster"}
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<h3>¡Bienvenido ${user}!</h3>
+			<div class="navbar">
+			  <div class="navbar-inner">    
+			    <ul class="nav">
+			      <li class="active"><a class="brand" href="@{Admin.index()}">Inicio</a></li>      
+			      <li><a href="@{ProductFronts.list()}">Productos Frontend</a></li>
+			      <li><a href="@{SupplierFronts.list()}">Proveedores Frontend</a></li>
+			    </ul>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+#{/secure.check}
