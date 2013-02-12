@@ -1,5 +1,0 @@
-# Application dependencies
-
-require:
-    - play -> crud
-    -play -> deadbolt 1.5.4
