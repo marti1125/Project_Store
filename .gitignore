@@ -4,3 +4,10 @@
 *.jar
 *.war
 *.ear
+
+modules/
+tmp/
+.settings/
+eclipse/
+.project
+.classpath
