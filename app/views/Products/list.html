@@ -5,9 +5,20 @@
 
     <h2 id="crudListTitle">&{'crud.list.title', type.name}</h2>
 
-    <div id="crudListSearch" class="form-search">
-        #{crud.search /}
-    </div>
+    <table id="MyGrid" class="table table-bordered datagrid">
+        <thead>
+            <tr>
+                <th>
+                    <div class="datagrid-header-right">
+                        <div class="input-append search">
+                            #{crud.search /}
+                        </div>
+                    </div>
+                </tr>
+            </th>
+        </thead>
+    </table>
+    
 
     <div id="crudListTable">
         #{crud.table /}
@@ -22,3 +33,7 @@
     </p>
 
 </div>
+<script src="@{'/public/js/fuelux.min.js'}" type="text/javascript"></script>
+<script type="text/javascript">
+$('#MyGrid').datagrid({ dataSource: dataSource, stretchHeight: true });
+</script>
