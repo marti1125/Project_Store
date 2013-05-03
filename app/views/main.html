@@ -17,112 +17,25 @@
     </head>
     <body>
 
-    <!-- NAVBAR  ================================================== -->
-  <div class="navbar-wrapper">
-    <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-    <div class="container">
-
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Cosmeticos Azucena</a>
-          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="@{Application.index()}">Inicio</a></li>
-              <li><a href="@{Application.products()}">Productos</a></li>
-              <li><a href="@{Application.suppliers()}">Proveedores</a></li>
-              <li><a href="@{Application.contact()}">Contáctenos</a></li>
-              <li><a href="/login">Login</a></li>              
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!-- /.navbar-inner -->
-      </div><!-- /.navbar -->
-
-    </div> <!-- /.container -->
-  </div><!-- /.navbar-wrapper -->
-
-  <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="@{'/public/img/slide-01.jpg'}" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Bienvenidos</h1>
-              <p class="lead">Cosmeticos Azucena donde encontraras los mejores productos de belleza.</p>
-            </div>
-          </div>
-        </div>
-        <!--div class="item">
-          <img src="@{'/public/img/slide-02.jpg'}" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="@{'/public/img/slide-03.jpg'}" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
-                </div>
-          </div>
-        </div-->
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#">Gestion de Tienda</a>
+        <ul class="nav">
+          <li class="active"><a href="@{Application.index()}">Inicio</a></li>              
+          <li><a href="/login">Login</a></li> 
+        </ul>
       </div>
-      <!--a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a-->
     </div>
+  
     #{doLayout /}
 
-    <div class="container">        
-        <!-- Footer -->
-        <hr />
-        <div class="row">
-            <div class="span12">                              
-                <ul class="nav nav-pills">
-                    <li>
-                        <a href="@{Application.index()}">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="@{Application.products()}">Productos</a>
-                    </li>
-                    <li>
-                        <a href="@{Application.suppliers()}">Proveedores</a>
-                    </li>
-                    <li>
-                        <a href="@{Application.contact()}">Contáctenos</a>
-                    </li> 
-                </ul>                                             
-            </div>
-        </div>
+    <div class="container">
         <hr/>
         <footer class="row">
             <div class="span12">
-                 <p>&copy; Copyright 2013.                  
-                  <span class="pull-right"><a href="#">Volver arriba</a></span>
-                  </p>
+                 <p>Open Source Project</p>
             </div>            
         </footer>
-    </div>
-    <script>
-      !function ($) {
-        $(function(){
-          // carousel demo
-          $('#myCarousel').carousel()
-        })
-      }(window.jQuery)
-    </script>
+    </div>    
     </body>
 </html>

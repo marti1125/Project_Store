@@ -13,7 +13,7 @@ public class Application extends Controller {
 		render();
 	}
 
-	public static void contact(String address, String message) {
+	/*public static void contact(String address, String message) {
 		Mails mail = new Mails();
 		mail.message(address, message);
 		render();
@@ -25,6 +25,6 @@ public class Application extends Controller {
 	
 	public static void products() {
 		render();
-	}
+	}*/
 
 }

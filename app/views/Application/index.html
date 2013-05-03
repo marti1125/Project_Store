@@ -1,41 +1,49 @@
 #{extends 'main.html' /}
-#{set title:'Bienvenidos' /}
+#{set title:'Gestion de Tienda' /}
 
 <div class="container">
 	<div class="row">
-		<div class="span4">
-			<h1>Cosmetologo Chic</h1>
-			<div id="cosRss"></div>
-		</div>
-		<div class="span4">
-			<h1>Cosmetologia</h1>			
-			<div id="cosmeRss"></div>		
-		</div>
-		<div class="span4">
-			<h1>Peinados</h1>
-			<div id="peineRss"></div>		
+		<br/><br/>
+		<div class="span12">		
+		    <form class="form-search">
+    			<input type="text" class="input-medium search-query span8">
+    			<button type="submit" class="btn btn-info">Buscar</button>
+    		</form>
+    	</div>
+	</div>
+	<div class="row">		
+		<div class="span12">
+			<table class="table table-bordered table-striped table-hover">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Producto</th>
+						<th>Cantidad</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Producto</td>
+						<td>18</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Producto</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Producto</td>
+						<td>50</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Producto</td>
+						<td>60</td>
+					</tr>
+				</tbody>			
+			</table>			
 		</div>
 	</div>
 </div>
-
-<script src="@{'/public/js/FeedEk.js'}" type="text/javascript"></script>
-<script type="text/javascript">
-	$('#cosRss').FeedEk({
-		FeedUrl : 'http://cosmetolochic.com/feed/',
-		MaxCount : 8,
-		ShowDesc : true,
-		ShowPubDate:true
-    });
-    $('#cosmeRss').FeedEk({
-		FeedUrl : 'http://es.wordpress.com/tag/cosmetologia/feed/',
-		MaxCount : 8,
-		ShowDesc : true,
-		ShowPubDate:true
-    });
-    $('#peineRss').FeedEk({
-		FeedUrl : 'http://feeds.feedburner.com/VentanaDeMny?format=xml',
-		MaxCount : 4,
-		ShowDesc : true,
-		ShowPubDate:true
-    });  
-</script>
