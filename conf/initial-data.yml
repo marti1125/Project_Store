@@ -1,0 +1,5 @@
+User(Admin):
+    email: marti1125@gmail.com
+    password: secret
+    fullname: Willy Aguirre
+    isAdmin: true
