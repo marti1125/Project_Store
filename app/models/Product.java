@@ -19,10 +19,6 @@ public class Product extends Model{
 	public int amount;
 	
 	@Required
-	@As("yyyy-MM-dd")
-	public Date initProduct;
-	
-	@Required
     @ManyToOne
     public User client;
 	
@@ -30,7 +26,6 @@ public class Product extends Model{
 		this.client = client;
 		this.description = description;
 		this.amount = amount;
-		this.initProduct = new Date();
 	}
 	
 	public String toString() {
