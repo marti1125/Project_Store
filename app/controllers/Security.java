@@ -9,11 +9,16 @@ public class Security extends Secure.Security {
 	}
 
 	static void onDisconnected() {
-		Application.index();
+		try {
+			Secure.login();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	static void onAuthenticated() {
-		Admin.index();
+		Application.index();
 	}
 
 	static boolean check(String profile) {

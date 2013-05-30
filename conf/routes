@@ -4,13 +4,6 @@
 
 # Home page
 GET     /                                       Application.index
-GET     /contactenos                            Application.contact
-GET     /proveedores                            Application.suppliers
-GET     /productos                              Application.products
-
-# Import CRUD routes
-GET     /admin/?                                Admin.index
-*       /admin                                  module:crud
 
 # Import Secure routes
 *       /                                       module:secure
