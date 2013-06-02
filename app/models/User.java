@@ -7,16 +7,18 @@ import play.data.validation.*;
 import play.db.jpa.*;
 
 @Entity
-public class User extends Model{
+public class User extends Model{	
 	
-	@Email
 	@Required
 	public String username;
 	
 	@Required
 	public String password;
 	
+	@Required
 	public String fullname;
+
+	@Required
 	public boolean isAdmin;	
 	
 	public User(String username, String password, String fullname){

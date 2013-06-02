@@ -15,16 +15,6 @@ public class Product extends Model{
     @MaxSize(10000)
 	public String description;
 	
-	/*@Required
-	public int amount;
-	
-	@Required
-	public Double cost;
-	
-	@Required
-	public Double price;*/
-	
-	
 	@Required
     @ManyToOne
     public User client;
