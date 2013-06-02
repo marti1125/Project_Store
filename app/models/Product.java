@@ -15,8 +15,15 @@ public class Product extends Model{
     @MaxSize(10000)
 	public String description;
 	
-	@Required
+	/*@Required
 	public int amount;
+	
+	@Required
+	public Double cost;
+	
+	@Required
+	public Double price;*/
+	
 	
 	@Required
     @ManyToOne
@@ -29,7 +36,7 @@ public class Product extends Model{
 	}
 	
 	public String toString() {
-		return description;
+		return description + ' ' + amount;
 	}
 	
 }

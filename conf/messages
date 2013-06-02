@@ -15,6 +15,7 @@ isAdmin=User is admin
 isWebMaster = User is WebMaster
 Products = Productos
 Add Product = Agregar Producto
+Users = Usuarios
 
 # Default CRUD messages
 # ~~~~~~

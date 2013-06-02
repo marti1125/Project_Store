@@ -30,7 +30,11 @@ public class User extends Model{
 	}
 	
 	public String toString() {
-		return fullname;
+		String adm = "";
+		if(isAdmin){
+			adm = "(Administrador)";
+		}
+		return fullname + ' ' + adm;
 	}
 	
 
