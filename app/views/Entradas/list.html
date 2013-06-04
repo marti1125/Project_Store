@@ -1,0 +1,28 @@
+#{extends 'main.html' /}
+#{set title:messages.get('crud.list.title', type.name) /}
+<div class="container">	
+	<div class="row">
+		<div class="span12">
+			
+			<ul class="breadcrumb">
+		    	<li><a href="/">Inicio</a> <span class="divider">/</span></li>
+		    	<li class="active">Entradas</li>
+		    </ul>	
+		    
+			#{crud.search /}
+		
+		    <div id="crudListTable">
+		        #{crud.table /}
+		    </div>
+		
+		    <div id="crudListPagination">
+		        #{crud.pagination /}
+		    </div>
+		
+		    <p id="crudListAdd">
+		        <a href="@{blank()}">&{'crud.add', type.modelName}</a>
+		    </p>
+		
+		</div>
+	</div>
+</div>
