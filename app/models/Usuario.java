@@ -10,33 +10,33 @@ import play.db.jpa.*;
 public class Usuario extends Model{	
 	
 	@Required
-	public String username;
+	public String usuario;
 	
 	@Required
-	public String password;
+	public String clave;
 	
 	@Required
-	public String fullname;
+	public String nombreCompleto;
 
 	@Required
-	public boolean isAdmin;	
+	public boolean esAdministrador;	
 	
-	public Usuario(String username, String password, String fullname){
-		this.username = username;
-		this.password = password;
-		this.fullname = fullname;
+	public Usuario(String usuario, String clave, String nombreCompleto){
+		this.usuario = usuario;
+		this.clave = clave;
+		this.nombreCompleto = nombreCompleto;
 	}
 	
-	public static Usuario connect(String username, String password){
-		return find("byUsernameAndPassword", username, password ).first();
+	public static Usuario connect(String usuario, String clave){
+		return find("byUsuarioAndClave", usuario, clave ).first();
 	}
 	
 	public String toString() {
 		String adm = "";
-		if(isAdmin){
+		if(esAdministrador){
 			adm = "(Administrador)";
 		}
-		return fullname + ' ' + adm;
+		return nombreCompleto + ' ' + adm;
 	}
 	
 

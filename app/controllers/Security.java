@@ -4,8 +4,8 @@ import models.Usuario;
 
 public class Security extends Secure.Security {
 
-	static boolean authenticate(String username, String password) {
-		return Usuario.connect(username, password) != null;
+	static boolean authenticate(String usuario, String clave) {
+		return Usuario.connect(usuario, clave) != null;
 	}
 
 	static void onDisconnected() {
@@ -22,9 +22,9 @@ public class Security extends Secure.Security {
 	}
 
 	static boolean check(String profile) {
-		Usuario user = Usuario.find("byUsername", connected()).first();
+		Usuario usuario = Usuario.find("byUsuario", connected()).first();
 		if ("admin".equals(profile)) {
-			return user.isAdmin;			
+			return usuario.esAdministrador;			
 		} else {
 			return false;
 		}
