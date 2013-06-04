@@ -5,6 +5,8 @@ import play.mvc.*;
 
 @Check("admin")
 @With(Secure.class)
-public class Products extends CRUD{
+public class Usuarios extends CRUD{
+	
+	
 
 }

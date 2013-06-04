@@ -12,15 +12,15 @@ public class Costo extends Model{
 
 	@Required
     @ManyToOne
-    public Product product;
+    public Producto producto;
 
 	@Required
-	public Double cost;	
+	public Double costo;	
 	
 	@Required
-	public Double price;
+	public Double precio;
 
 	@Required
-	public Date costEntry;
+	public Date fechaCostoIngresado;
 
 }

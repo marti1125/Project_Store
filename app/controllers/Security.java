@@ -1,11 +1,11 @@
 package controllers;
 
-import models.User;
+import models.Usuario;
 
 public class Security extends Secure.Security {
 
 	static boolean authenticate(String username, String password) {
-		return User.connect(username, password) != null;
+		return Usuario.connect(username, password) != null;
 	}
 
 	static void onDisconnected() {
@@ -22,7 +22,7 @@ public class Security extends Secure.Security {
 	}
 
 	static boolean check(String profile) {
-		User user = User.find("byUsername", connected()).first();
+		Usuario user = Usuario.find("byUsername", connected()).first();
 		if ("admin".equals(profile)) {
 			return user.isAdmin;			
 		} else {

@@ -8,16 +8,16 @@ import play.data.binding.*;
 import play.db.jpa.*;
 
 @Entity
-public class Entry extends Model{
+public class Entrada extends Model{
 
 	@Required
     @ManyToOne
-    public Product product;
+    public Producto producto;
 
 	@Required
-	public int amount;	
+	public int cantidad;	
 	
 	@Required
-	public Date dateEntry;
+	public Date fechaDeEntrada;
 
 }

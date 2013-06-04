@@ -7,7 +7,7 @@ import play.data.validation.*;
 import play.db.jpa.*;
 
 @Entity
-public class User extends Model{	
+public class Usuario extends Model{	
 	
 	@Required
 	public String username;
@@ -21,13 +21,13 @@ public class User extends Model{
 	@Required
 	public boolean isAdmin;	
 	
-	public User(String username, String password, String fullname){
+	public Usuario(String username, String password, String fullname){
 		this.username = username;
 		this.password = password;
 		this.fullname = fullname;
 	}
 	
-	public static User connect(String username, String password){
+	public static Usuario connect(String username, String password){
 		return find("byUsernameAndPassword", username, password ).first();
 	}
 	
