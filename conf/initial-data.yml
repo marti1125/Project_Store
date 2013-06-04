@@ -1,6 +1,6 @@
-User(Admin):
-    username: admin
-    password: secret
-    fullname: Willy Aguirre
-    isAdmin: true
+Usuario(esAdministrador):
+    usuario: admin
+    clave: secret
+    nombreCompleto: Willy Aguirre
+    esAdministrador: true
 
