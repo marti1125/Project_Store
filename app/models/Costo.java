@@ -8,7 +8,7 @@ import play.data.binding.*;
 import play.db.jpa.*;
 
 @Entity
-public class Cost extends Model{
+public class Costo extends Model{
 
 	@Required
     @ManyToOne
