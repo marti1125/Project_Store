@@ -15,11 +15,8 @@ public class Costo extends Model{
     public Producto producto;
 
 	@Required
-	public Double costo;	
+	public Double costo;
 	
-	@Required
-	public Double precio;
-
 	@Required
 	public Date fechaCostoIngresado;
 
