@@ -16,12 +16,16 @@ public class Producto extends Model{
 	public String descripcion;
 	
 	@Required
+	public int cantidadInicial;
+	
+	@Required
     @ManyToOne
     public Usuario usuario;
 	
-	public Producto(Usuario usuario, String descripcion){
+	public Producto(Usuario usuario, String descripcion, int cantidadInicial){
 		this.usuario = usuario;
-		this.descripcion = descripcion;		
+		this.descripcion = descripcion;
+		this.cantidadInicial = cantidadInicial;
 	}
 	
 	public String toString() {
