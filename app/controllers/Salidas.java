@@ -44,21 +44,29 @@ public static void create() throws Exception {
         
         producto = producto.findById(salida.producto.id);        
         cantidadFinal = producto.cantidadInicial - salida.cantidad;
-        producto.cantidadInicial = cantidadFinal;
-        
-        producto.save();
-        
-        System.out.println(producto.cantidadInicial);        
-        
-        object._save();
-        flash.success(play.i18n.Messages.get("crud.created", type.modelName));
-        if (params.get("_save") != null) {
-            redirect(request.controller + ".list");
+        if(cantidadFinal >= 0){
+        	producto.cantidadInicial = cantidadFinal;        
+            producto.save();
+            System.out.println("ya no tiene productos");
+            
+            object._save();
+            
+            flash.success(play.i18n.Messages.get("crud.created", type.modelName));
+            if (params.get("_save") != null) {
+                redirect(request.controller + ".list");
+            }
+            if (params.get("_saveAndAddAnother") != null) {
+                redirect(request.controller + ".blank");
+            }
+            redirect(request.controller + ".show", object._key());
+            
+        } else {
+        	flash.error(play.i18n.Messages.get("cantidad insuficiente", type.modelName));
+        	redirect(request.controller + ".blank");
+        	System.out.println("cantidad insuficiente");
         }
-        if (params.get("_saveAndAddAnother") != null) {
-            redirect(request.controller + ".blank");
-        }
-        redirect(request.controller + ".show", object._key());
+        
+        
     }
 
 }
