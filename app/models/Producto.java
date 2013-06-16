@@ -13,23 +13,16 @@ public class Producto extends Model{
 	@Lob
     @Required
     @MaxSize(10000)
-	public String descripcion;
+	public String descripcion;	
 	
 	@Required
-	public int cantidadInicial;
+	public int cantidadInicial = 0;
 	
-	@Required
-    @ManyToOne
+	@ManyToOne
     public Usuario usuario;
 	
-	public Producto(Usuario usuario, String descripcion, int cantidadInicial){
-		this.usuario = usuario;
-		this.descripcion = descripcion;
-		this.cantidadInicial = cantidadInicial;
-	}
-	
 	public String toString() {
-		return descripcion;
+		return descripcion + " Cantidad: " + cantidadInicial;
 	}
 	
 }
