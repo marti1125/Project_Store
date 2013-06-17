@@ -10,15 +10,19 @@ import play.db.jpa.*;
 @Entity
 public class Producto extends Model{
 	
+	@Required
+	public int codigo;
+	
 	@Lob
     @Required
     @MaxSize(10000)
-	public String descripcion;	
+	public String descripcion;
 	
 	@Required
 	public int cantidadInicial = 0;
 	
 	@ManyToOne
+	@Required
     public Usuario usuario;
 	
 	public String toString() {

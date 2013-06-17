@@ -19,5 +19,9 @@ public class Salida extends Model{
 	
 	@Required
 	public Date fechaDeSalida;
+	
+	public String toString() {		
+		return producto.toString() +  " " + cantidad;
+	}
 
 }
