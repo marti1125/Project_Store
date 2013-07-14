@@ -18,6 +18,13 @@ Add Product = Agregar Producto
 Users = Usuarios
 Search = Buscar
 
+Add Usuario = Agregar Usuario
+Add Producto = Agregar Producto
+Add Categoria = Agregar Categoria
+Add Costo = Agregar Costo
+Add Entrada = Agregar Entrada
+Add Salida = Agregar Salida
+
 # Default CRUD messages
 # ~~~~~~
 
@@ -28,7 +35,7 @@ crud.index.title=Choose the object to edit
 crud.index.objectType=Object type
 crud.index.action=
 crud.index.add=Add
-crud.add=Add &{%s}
+crud.add= Agregar &{%s}
 crud.list.title=&{%s}
 crud.list.size=%d &{%s}
 crud.list.totalSize=%d total
@@ -48,7 +55,7 @@ crud.created=The &{%s} has been created
 crud.saved=The &{%s} has been saved
 crud.deleted=The &{%s} has been deleted
 crud.delete.error=Cannot delete this object
-crud.search=Search
+crud.search= Buscar
 crud.none=(None)
 crud.selectValue=(Please select a value)
 
