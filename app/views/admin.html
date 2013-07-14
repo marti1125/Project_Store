@@ -18,7 +18,20 @@
             <div class="row">
                 <div class="span12">
                     <h2>Cosmeticos Azucena - Panel de Control</h2>
-                    <span class="pull-right"><a href="@{Secure.logout()}">Salir</a></span>
+                    <div class="nav-collapse collapse">
+						<ul class="nav pull-right">							
+							<li>
+								<div class="btn-group">
+							    <a class="btn btn-primary" href="#"><i class="icon-user"></i> Bienvenido ${session.name}</a>
+							    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-caret-down"></span></a>
+							    <ul class="dropdown-menu">
+							    <li><a href="@{Secure.logout()}"><i class="icon-signout"></i> Salir</a></li>							    
+							    </ul>
+							    </div>
+							</li>							
+						</ul>
+					</div>
+                    
                 </div>                           
                 <div class="row">
                     #{doLayout /}
