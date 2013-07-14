@@ -25,14 +25,25 @@
 				<div class="container">					
 					<a class="brand" href="/">Almacen</a>
 					<div class="nav-collapse collapse">
+						<ul class="nav pull-left">							
+							<li>
+								<div class="btn-group">
+							    	<a class="btn btn-info" href="#"><i class="icon-info-sign"></i> Ayuda</a>
+							    	<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-caret-down"></span></a>
+							    	<ul class="dropdown-menu">
+							    		<li><a href="#"><i class="icon-search"></i> Buscar Producto</a></li>							    
+							    	</ul>
+							    </div>
+							</li>							
+						</ul>
 						<ul class="nav pull-right">							
 							<li>
 								<div class="btn-group">
-							    <a class="btn btn-primary" href="#"><i class="icon-user"></i> Bienvenido ${session.name}</a>
-							    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-caret-down"></span></a>
-							    <ul class="dropdown-menu">
-							    <li><a href="@{Secure.logout()}"><i class="icon-signout"></i> Salir</a></li>							    
-							    </ul>
+							    	<a class="btn btn-inverse" href="#"><i class="icon-user"></i> Bienvenido ${session.name}</a>
+							    	<a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-caret-down"></span></a>
+							    	<ul class="dropdown-menu">
+							   			<li><a href="@{Secure.logout()}"><i class="icon-signout"></i> Salir</a></li>							    
+							    	</ul>
 							    </div>
 							</li>							
 						</ul>
