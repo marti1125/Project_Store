@@ -1,4 +1,4 @@
-# You can specialize this file for each language.
+ Required# You can specialize this file for each language.
 # For example, for French create a messages.fr file
 Administration = Panel de Control
 secure.username=Your email:
@@ -18,12 +18,19 @@ Add Product = Agregar Producto
 Users = Usuarios
 Search = Buscar
 
-Add Usuario = Agregar Usuario
-Add Producto = Agregar Producto
-Add Categoria = Agregar Categoria
-Add Costo = Agregar Costo
-Add Entrada = Agregar Entrada
-Add Salida = Agregar Salida
+usuario=Usuario
+clave=Clave
+nombreCompleto=Nombre Completo
+esAdministrador= Es Administrador
+codigo=Código
+descripcion=Descripcion
+cantidadInicial=Cantidad Inicial
+producto=Producto
+costo=Costo
+fechaCostoIngresado= Fecha Ingreso
+cantidad=Cantidad
+fechaDeEntrada=Fecha De Entrada
+fechaDeSalida=Fecha De Salida 
 
 # Default CRUD messages
 # ~~~~~~
@@ -34,7 +41,7 @@ crud.blank=New
 crud.index.title=Choose the object to edit
 crud.index.objectType=Object type
 crud.index.action=
-crud.index.add=Add
+crud.index.add=Agregar
 crud.add= Agregar &{%s}
 crud.list.title=&{%s}
 crud.list.size=%d &{%s}
@@ -48,7 +55,7 @@ crud.save=Guardar
 crud.saveAndContinue=Guardar y seguir editando
 crud.cancel=Cancel
 crud.hasErrors=Please correct errors
-crud.blank.title=Add &{%s}
+crud.blank.title=Agregar &{%s}
 crud.saveAndAddAnother=Guardar y crear uno nuevo
 crud.delete=Delete &{%s}
 crud.created=The &{%s} has been created
@@ -59,12 +66,12 @@ crud.search= Buscar
 crud.none=(None)
 crud.selectValue=(Seleccionar)
 
-crud.help.required=Required.
+crud.help.required=Requerido.
 crud.help.minlength=Min length is %d.
-crud.help.maxlength=Max length is %d.
+crud.help.maxlength=Cantidad maxima de caracteres %d.
 crud.help.email=Valid email address.
 crud.help.dateformat=&{%s} format.
-crud.help.numeric=Numeric.
+crud.help.numeric= Ingrese solo números.
 crud.help.min=Must be greater than %d.
 crud.help.future=In the future.
 crud.help.past=In the past.
