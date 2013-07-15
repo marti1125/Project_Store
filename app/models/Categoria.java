@@ -10,14 +10,10 @@ import play.db.jpa.Model;
 public class Categoria extends Model{
 	
 	@Required
-    @ManyToOne
-    public Producto producto;
-	
-	@Required
 	public String descripcion;
 	
 	public String toString() {		
-		return producto.toString() +  " " + descripcion;
+		return descripcion;
 	}
 
 }

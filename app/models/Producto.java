@@ -21,6 +21,10 @@ public class Producto extends Model{
 	@Required
 	public int cantidadInicial = 0;
 	
+	@Required
+    @ManyToOne
+    public Categoria categoria;
+	
 	public String toString() {
 		return descripcion + " Cantidad: " + cantidadInicial;
 	}
