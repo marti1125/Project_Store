@@ -11,7 +11,7 @@ import play.db.jpa.*;
 public class Producto extends Model{
 	
 	@Required
-	public int codigo;
+	public String codigo;
 	
 	@Lob
     @Required
@@ -20,10 +20,6 @@ public class Producto extends Model{
 	
 	@Required
 	public int cantidadInicial = 0;
-	
-	@ManyToOne
-	@Required
-    public Usuario usuario;
 	
 	public String toString() {
 		return descripcion + " Cantidad: " + cantidadInicial;
