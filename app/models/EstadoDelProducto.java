@@ -9,7 +9,8 @@ import play.db.jpa.*;
 
 import enums.*;
 
-public class ProductoEstado extends Model{
+@Entity
+public class EstadoDelProducto extends Model{
 	
 	public String producto;
 	
