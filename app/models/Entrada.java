@@ -1,5 +1,8 @@
 package models;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import javax.persistence.*;
 
@@ -22,6 +25,6 @@ public class Entrada extends Model{
 	
 	public String toString() {
 		return this.producto.toString() + " "+"Cantidad: "+ this.cantidad;
-	}
+	}	
 	
 }

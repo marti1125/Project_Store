@@ -2,11 +2,11 @@
     <label for="${field.id}">
         &{_name}
     </label>
-    <input id="${field.id}" class="${field.errorClass} datepicker" type="text" name="${field.name}" value="${_value?.format()}" size="10" />
+    <input id="${field.id}" class="${field.errorClass} datepicker"  type="text" name="${field.name}" value="${_value?.format()}" size="10" />
     #{ifError field.name}
         <span class="error">${field.error.raw()}</span>
     #{/ifError}
 #{/field}
 <script type="text/javascript" charset="utf-8">
-	$('.datepicker').datepicker();
+	$('.datepicker').datepicker({format: 'yyyy-mm-dd'});
 </script>
