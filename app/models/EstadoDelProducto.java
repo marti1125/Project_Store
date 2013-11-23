@@ -12,7 +12,8 @@ import enums.*;
 @Entity
 public class EstadoDelProducto extends Model{
 	
-	public String producto;
+    @ManyToOne
+    public Producto producto;
 	
 	@Enumerated(EnumType.STRING)
 	public Estado estado;

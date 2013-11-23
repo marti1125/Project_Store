@@ -4,7 +4,12 @@ Usuario(esAdministrador):
     nombreCompleto: Willy Aguirre
     esAdministrador: true
 
-Producto:
+Categoria(Shampoo):
+    descripcion: Shampoo
+
+Producto(Sedal x 355ml):
+    codigo: 1001
     descripcion: Sedal x 355ml
-    cantidadInicial: 0
+    cantidadInicial: 10
     usuario: admin
+    categoria: Shampoo

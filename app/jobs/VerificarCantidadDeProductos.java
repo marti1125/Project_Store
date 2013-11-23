@@ -14,19 +14,18 @@ public class VerificarCantidadDeProductos extends Job {
 	public void doJob() {	
 		
 		List<Producto> productos = Producto.findAll();
-		
 		for(Producto p : productos){
-			EstadoDelProducto estadoDelProducto = new EstadoDelProducto();
-			if(p.cantidadInicial == 0){
-				// No tiene Stock
-				estadoDelProducto.producto = p.descripcion;
-				estadoDelProducto.estado = Estado.V;
-				estadoDelProducto.save();
-			} else if(p.cantidadInicial <= 5){
-				// Ya esta por acabarse, 5 productos
-				estadoDelProducto.producto = p.descripcion;
-				estadoDelProducto.estado = Estado.P;
-				estadoDelProducto.save();
+			Producto productoEncontrado = Producto.findById(p.id);
+			EstadoDelProducto estadoProducto = new EstadoDelProducto();
+			EstadoDelProducto existeProducto = EstadoDelProducto.find("producto.id",p.id).first();
+			if(p.cantidadInicial == 0 && existeProducto == null){
+				estadoProducto.producto = productoEncontrado;
+				estadoProducto.estado = Estado.V;
+				estadoProducto.save();
+			} else if(p.cantidadInicial <= 5 && existeProducto == null){
+				estadoProducto.producto = productoEncontrado;
+				estadoProducto.estado = Estado.P;
+				estadoProducto.save();
 			} else {
 				// Hay Stock
 			}
