@@ -43,7 +43,7 @@ public class Entradas extends CRUD{
         
         entrada = (Entrada) object;  
         
-        producto = producto.findById(entrada.producto.id);        
+        producto = producto.findById(entrada.producto.codigo);        
         cantidadFinal = producto.cantidadInicial + entrada.cantidad;
         producto.cantidadInicial = cantidadFinal;
         

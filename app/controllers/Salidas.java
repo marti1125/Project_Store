@@ -42,7 +42,7 @@ public static void create() throws Exception {
         
         salida = (Salida) object;  
         
-        producto = producto.findById(salida.producto.id);        
+        producto = producto.findById(salida.producto.codigo);        
         cantidadFinal = producto.cantidadInicial - salida.cantidad;
         if(cantidadFinal >= 0){
         	producto.cantidadInicial = cantidadFinal;        

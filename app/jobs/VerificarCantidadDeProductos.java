@@ -15,9 +15,9 @@ public class VerificarCantidadDeProductos extends Job {
 		
 		List<Producto> productos = Producto.findAll();
 		for(Producto p : productos){
-			Producto productoEncontrado = Producto.findById(p.id);
+			Producto productoEncontrado = Producto.findById(p.codigo);
 			EstadoDelProducto estadoProducto = new EstadoDelProducto();
-			EstadoDelProducto existeProducto = EstadoDelProducto.find("producto.id",p.id).first();
+			EstadoDelProducto existeProducto = EstadoDelProducto.find("producto.codigo",p.codigo).first();
 			if(p.cantidadInicial == 0 && existeProducto == null){
 				estadoProducto.producto = productoEncontrado;
 				estadoProducto.estado = Estado.V;
