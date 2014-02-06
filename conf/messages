@@ -30,7 +30,8 @@ costo=Costo
 fechaCostoIngresado= Fecha Ingreso
 cantidad=Cantidad
 fechaDeEntrada=Fecha De Entrada
-fechaDeSalida=Fecha De Salida 
+fechaDeSalida=Fecha De Salida
+categoria=Categoria
 
 # Default CRUD messages
 # ~~~~~~
