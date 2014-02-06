@@ -6,7 +6,7 @@
     </label>
 
     #{if _field.multiple}
-        <input type="hidden" name="${pName}" value="" />
+        <input type="hidden" class="form-control" name="${pName}" value="" />
         <select id="${field.id}" name="${pName}" multiple="yes">
             %{ _field.choices.each() { }%
             %{
@@ -30,7 +30,7 @@
         </select>
     #{/if}
     #{else}
-        <select id="${field.id}" name="${pName}">
+        <select id="${field.id}" class="form-control" name="${pName}">
             #{ifnot _field.required}
                 <option value="">&{'crud.none'}</option>
             #{/ifnot}
