@@ -1,30 +1,32 @@
 #{extends 'login.html' /}
-#{set title:'Login' /}
+#{set title:'Ingresar' /}
 
 <div class="container">
 
 <div id="login">
 		
-	#{form @authenticate(), class:'form-signin' }
-		
+	#{form @authenticate(), class:'form-signin', role:'form' }
+		<h1>Almacen</h1>
+		<hr/>
 		#{if flash.error}
-			<div class="alert">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                Usuario o Contraseña incorrecto                  
+			<div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>¡Error! </strong>Usuario o Contraseña incorrecto                  
             </div>
 		#{/if}
 		#{if flash.success}
-			<p class="success">
-				&{flash.success}
-			</p>
+			<div class="alert alert-success">
+				<strong>¡Exito! </strong> &{flash.success}
+			</div>
 		#{/if}
-        <h3>Por favor, identifíquese</h3>
+		
+        <h4 class="form-signin-heading">Por favor, identifíquese</h4>
 	   
         <p>
-            <input placeholder="Usuario" class="input-block-level" type="text" name="username" id="username" maxlength="30" value="${flash.username}" required />
+            <input placeholder="Usuario" class="form-control" type="text" name="username" id="username" maxlength="30" value="${flash.username}" required />
         </p>
         <p>
-            </label> <input placeholder="Contraseña" class="input-block-level" type="password" name="password" id="password" maxlength="30" required />
+            </label> <input placeholder="Contraseña" class="form-control" type="password" name="password" id="password" maxlength="30" required />
         </p>
         <p>
             <label class="checkbox">
@@ -32,7 +34,7 @@
             </label>                     
         </p>
         <p>
-            <input class="btn btn-large btn-primary" type="submit" id="signin" value="Ingresar" />
+            <input class="btn btn-lg btn-primary btn-block" type="submit" id="signin" value="Ingresar" />
         </p>		
 	#{/form}
 </div>

@@ -6,8 +6,8 @@
         <div class="span12">
 
             <ul class="breadcrumb">
-                <li><a href="/">Inicio</a><span class="divider">/</span></li>
-                <li><a href="/productos/list">Productos</a><span class="divider">/</span></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productos/list">Productos</a></li>
                 <li class="active">Actualizar Producto</li>
             </ul>
             
@@ -19,15 +19,15 @@
                 #{form action:@save(object._key()), enctype:'multipart/form-data'}
                     #{crud.form /}
                     <p class="crudButtons">
-                        <input type="submit" name="_save" value="&{'crud.save', type.modelName}" />
-                        <input type="submit" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />
+                        <input type="submit" class="btn btn-primary" name="_save" value="&{'crud.save', type.modelName}" />
+                        <input type="submit" class="btn btn-primary" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />
                     </p>
                 #{/form}
                 </div>
 
                 #{form @delete(object._key())}
                     <p class="crudDelete">
-                        <input type="submit" value="&{'crud.delete', type.modelName}" />
+                        <input type="submit" class="btn btn-primary" value="&{'crud.delete', type.modelName}" />
                     </p>
                 #{/form}
 
