@@ -5,6 +5,7 @@
 *.ear
 *.jar
 
+precompiled/
 modules/
 tmp/
 .settings/

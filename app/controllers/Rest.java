@@ -25,4 +25,11 @@ public class Rest extends Controller {
 		renderJSON(mapper.writeValueAsString(productosFaltantes));		
 	}
 	
+	public static void buscarProducto(String codigo) throws Exception {
+		response.headers.put("Access-Control-Allow-Origin", new Header("Access-Control-Allow-Origin", "*"));
+		Producto producto = Producto.find("codigo = ? ", codigo).first();
+		org.codehaus.jackson.map.ObjectMapper mapper = new ObjectMapper();		
+		renderJSON(mapper.writeValueAsString(producto));		
+	}
+	
 }
