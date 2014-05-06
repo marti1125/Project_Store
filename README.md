@@ -9,6 +9,10 @@ Para ejecutar el proyecto:
 * play deps --sync
 * play run
 
+Ejecutar en diferente puerto:
+
+* play run --http.port=8080
+
 Para desarrollar con Eclipse IDE:
 
 * (eclipse) play eclipsify
