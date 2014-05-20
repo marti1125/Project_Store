@@ -18,6 +18,7 @@
                 <div class="objectForm">
                 #{form action:@save(object._key()), enctype:'multipart/form-data'}
                     #{crud.form /}
+                    <br/>
                     <p class="crudButtons">
                         <input type="submit" class="btn btn-primary" name="_save" value="&{'crud.save', type.modelName}" />
                         <input type="submit" class="btn btn-primary" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />

@@ -37,3 +37,4 @@ GET			/											CRUD.index
 GET         /listaDeProductos                           Rest.listaDeProductos
 GET         /listarProductosFaltantes                   Rest.listaDeProductosFaltantes
 GET         /buscarProducto                             Rest.buscarProducto
+GET         /listaDeTiendas                             Rest.listaDeTiendas
