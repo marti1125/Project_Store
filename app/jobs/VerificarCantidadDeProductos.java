@@ -18,7 +18,7 @@ public class VerificarCantidadDeProductos extends Job {
 			Producto productoEncontrado = Producto.findById(p.codigo);
 			EstadoDelProducto estadoProducto = new EstadoDelProducto();
 			EstadoDelProducto existeProducto = EstadoDelProducto.find("producto.codigo",p.codigo).first();
-			if(p.cantidadInicial == 0 && existeProducto == null){
+			/*if(p.cantidadInicial == 0 && existeProducto == null){
 				estadoProducto.producto = productoEncontrado;
 				estadoProducto.estado = Estado.V;
 				estadoProducto.save();
@@ -28,7 +28,7 @@ public class VerificarCantidadDeProductos extends Job {
 				estadoProducto.save();
 			} else {
 				// Hay Stock
-			}
+			}*/
 		}
 		
 	}

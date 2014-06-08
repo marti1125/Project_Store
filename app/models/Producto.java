@@ -8,9 +8,8 @@ import play.data.binding.*;
 import play.db.jpa.*;
 
 @Entity
-public class Producto extends GenericModel{
+public class Producto extends Model {
 	
-	@Id
 	@Required
 	public String codigo;
 	
@@ -20,14 +19,11 @@ public class Producto extends GenericModel{
 	public String descripcion;
 	
 	@Required
-	public int cantidadInicial = 0;
-	
-	@Required
     @ManyToOne
     public Categoria categoria;
 	
 	public String toString() {
-		return descripcion + " Cantidad: " + cantidadInicial;
+		return this.descripcion;
 	}
 	
 }

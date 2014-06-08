@@ -43,9 +43,9 @@ public static void create() throws Exception {
         salida = (Salida) object;  
         
         producto = producto.findById(salida.producto.codigo);        
-        cantidadFinal = producto.cantidadInicial - salida.cantidad;
+        //cantidadFinal = producto.cantidadInicial - salida.cantidad;
         if(cantidadFinal >= 0){
-        	producto.cantidadInicial = cantidadFinal;        
+        	//producto.cantidadInicial = cantidadFinal;        
             producto.save();
             System.out.println("ya no tiene productos");
             

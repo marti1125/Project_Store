@@ -44,12 +44,12 @@ public class Entradas extends CRUD{
         entrada = (Entrada) object;  
         
         producto = producto.findById(entrada.producto.codigo);        
-        cantidadFinal = producto.cantidadInicial + entrada.cantidad;
-        producto.cantidadInicial = cantidadFinal;
+        //cantidadFinal = producto.cantidadInicial + entrada.cantidad;
+        //producto.cantidadInicial = cantidadFinal;
         
         producto.save();
         
-        System.out.println(producto.cantidadInicial);        
+        //System.out.println(producto.cantidadInicial);        
         
         object._save();
         flash.success(play.i18n.Messages.get("crud.created", type.modelName));

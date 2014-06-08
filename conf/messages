@@ -17,7 +17,7 @@ Products = Productos
 Add Product = Agregar Producto
 Users = Usuarios
 Search = Buscar
-
+direccion = Dirección
 usuario=Usuario
 clave=Clave
 nombreCompleto=Nombre Completo
