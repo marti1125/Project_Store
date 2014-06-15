@@ -76,6 +76,7 @@ public class Secure extends Controller {
     	
     	if(usuario != null){
     		session.put("nombreCompleto", usuario.nombreCompleto);
+    		session.put("idUsuario", usuario.id);
     		//allowed = true;
     	} else {
     		flash.keep("url");

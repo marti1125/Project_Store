@@ -33,6 +33,8 @@ cantidad=Cantidad
 fechaDeEntrada=Fecha De Entrada
 fechaDeSalida=Fecha De Salida
 categoria=Categoria
+todosLasTiendas = Todos las Tiendas
+tienda = Tienda
 
 # Default CRUD messages
 # ~~~~~~

@@ -18,8 +18,12 @@ public class Usuario extends Model{
 	@Required
 	public String nombreCompleto;
 
-	@Required
-	public boolean esAdministrador;	
+	public boolean esAdministrador;
+	
+	@ManyToOne
+    public Tienda tienda;
+	
+	public boolean todosLasTiendas;
 	
 	public Usuario(String usuario, String clave, String nombreCompleto){
 		this.usuario = usuario;

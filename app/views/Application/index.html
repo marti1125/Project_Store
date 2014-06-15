@@ -1,6 +1,9 @@
 #{extends 'main.html' /}
 #{set title:'Gestion de Tienda' /}
 
+
+#{if usuario.esAdministrador}
+
 <div class="container">	
 	<div class="row">		
 		<div class="col-md-12">
@@ -99,3 +102,67 @@
         </div> 
 	</div>
 </div>
+
+#{/if}
+#{else}
+
+<div class="container">	
+	<div class="row">		
+		<div class="col-md-12">
+			<ul class="breadcrumb">
+		    	<li><a href="#"><i class="fa fa-cogs"></i> Mantenimiento</a></li>		    
+		    </ul>		
+		</div>
+		<div class="col-md-12">
+		    <div class="col-md-2 center">
+		    	<a href="productos/list">		    	
+		    		<img src="@{'/public/img/productos.png'}" />	    	
+		    	</a><br/>
+		    	Productos
+		    </div>
+		    <div class="col-md-2 center">
+		    	<a href="productosportiendas/list">		    	
+		    		<img src="@{'/public/img/productos.png'}" />	    	
+		    	</a><br/>
+		    	Productos por Tiendas
+		    </div>
+		    <div class="col-md-2 center">
+		    	<a href="categorias/list">		    	
+		    		<img src="@{'/public/img/categorias.png'}" />	    	
+		    	</a><br/>
+		    	Categorias
+		    </div>
+		    <div class="col-md-2 center">
+		    	<a href="costos/list">		    	
+		    		<img src="@{'/public/img/costos.png'}" />	    	
+		    	</a><br/>
+		    	Costo de Productos
+		    </div>
+		</div>
+		
+		<div class="col-md-12">
+			<br/>
+			<ul class="breadcrumb">
+		    	<li><a href="#"><i class="fa fa-exchange"></i> Registro</a></li>		    
+		    </ul>	
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-2 center">
+		    	<a href="entradas/list">
+		    	<img src="@{'/public/img/ingreso.png'}" />	    	
+		    	</a><br/>
+		    	Ingreso de Productos
+			</div>
+		    <div class="col-md-2 center">
+		    	<a href="salidas/list">		    	
+		    		<img src="@{'/public/img/salida.png'}" />	    	
+		    	</a><br/>
+		    	Salida de Productos
+		    </div>
+		</div>
+		 
+	</div>
+</div>
+
+
+#{/else}
