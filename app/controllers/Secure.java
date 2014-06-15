@@ -69,27 +69,35 @@ public class Secure extends Controller {
 
     public static void authenticate(@Required String username, String password, boolean remember) throws Throwable {
     	
-    	Usuario usuario = Usuario.find("usuario = ? ", username).first();
+    	// Check tokens
+        //Boolean allowed = false;
+    	
+    	Usuario usuario = Usuario.find("usuario = ? and clave = ?", username, password).first();
     	
     	if(usuario != null){
     		session.put("nombreCompleto", usuario.nombreCompleto);
+    		//allowed = true;
+    	} else {
+    		flash.keep("url");
+            flash.error("secure.error");
+            params.flash();
+            login();
     	}
-    	
-        // Check tokens
-        Boolean allowed = false;
-        try {
+       
+        /*try {
             // This is the deprecated method name
-            allowed = (Boolean)Security.invoke("authentify", username, password);
+            allowed = (Boolean)Security.invoke("authenticate", username, password);
         } catch (UnsupportedOperationException e ) {
             // This is the official method name
             allowed = (Boolean)Security.invoke("authenticate", username, password);
-        }
-        if(validation.hasErrors() || !allowed) {
+        }*/
+        
+        /*if(validation.hasErrors() || !allowed) {
             flash.keep("url");
             flash.error("secure.error");
             params.flash();
             login();
-        }
+        }*/
         // Mark user as connected
         session.put("username", username);
         // Remember if needed

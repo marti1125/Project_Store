@@ -16,26 +16,27 @@
 #{/if}
 #{if flash.success}
 <div class="alert alert-success">
-<strong>¡Exito! </strong> &{flash.success}
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<strong>¡Exito! </strong> &{flash.success}
 </div>
 #{/if}
 
         <h4 class="form-signin-heading">Por favor, identifíquese</h4>
 <br/>
-        <p>
-            <input placeholder="Usuario" class="form-control" type="text" name="username" id="username" maxlength="30" value="${flash.username}" required />
-        </p>
-        <p>
-            </label> <input placeholder="Contraseña" class="form-control" type="password" name="password" id="password" maxlength="30" required />
-        </p>
-        <p>
-            <label class="checkbox">
-                <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} /> <span class="btext">Recuerdame</span>
-            </label>
-        </p>
-        <p>
-        	<button class="btn btn-lg btn-primary btn-block" type="submit" id="signin"><i class="fa fa-sign-in"></i> Ingresar</button>
-        </p>	
+       <p>
+           <input placeholder="Usuario" class="form-control" type="text" name="username" id="username" maxlength="30" value="${flash.username}" required />
+       </p>
+       <p>
+           </label> <input placeholder="Contraseña" class="form-control" type="password" name="password" id="password" maxlength="30" required />
+       </p>
+       <p>
+           <label class="checkbox">
+               <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} /> <span class="btext">Recuerdame</span>
+           </label>
+       </p>
+       <p>
+       	<button class="btn btn-lg btn-primary btn-block" type="submit" id="signin"><i class="fa fa-sign-in"></i> Ingresar</button>
+       </p>	
 #{/form}
 </div>
 

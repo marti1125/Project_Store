@@ -1,7 +1,6 @@
 # Application dependencies
 
 require:
-    - play
     - joda-time -> joda-time 2.2:
          transitive: false
     - org.codehaus.jackson -> jackson-mapper-asl 1.9.13

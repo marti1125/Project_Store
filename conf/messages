@@ -11,6 +11,7 @@ client=Client
 email=Email
 password=Password
 fullname=Full name
+secure.logout= Termino su sesión
 isAdmin=User is admin
 isWebMaster = User is WebMaster
 Products = Productos
