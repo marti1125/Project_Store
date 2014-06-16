@@ -18,10 +18,6 @@ public class Producto extends Model {
     @MaxSize(10000)
 	public String descripcion;
 	
-	@Required
-    @ManyToOne
-    public Categoria categoria;
-	
 	public String toString() {
 		return this.descripcion;
 	}

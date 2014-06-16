@@ -11,10 +11,6 @@ import play.db.jpa.*;
 public class Costo extends Model{
 
 	@Required
-    @ManyToOne
-    public Producto producto;
-
-	@Required
 	public Double costo;
 	
 	@Required

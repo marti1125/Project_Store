@@ -2,6 +2,7 @@ package jobs;
 
 import models.Usuario;
 import play.jobs.*;
+import play.mvc.Before;
 import play.test.Fixtures;
 
 @OnApplicationStart

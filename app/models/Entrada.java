@@ -24,7 +24,7 @@ public class Entrada extends Model{
 	public Date fechaDeEntrada;
 	
 	public String toString() {
-		return this.producto.toString() + " "+"Cantidad: "+ this.cantidad;
+		return String.valueOf(this.cantidad);
 	}	
 	
 }

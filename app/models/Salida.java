@@ -11,17 +11,13 @@ import play.db.jpa.*;
 public class Salida extends Model{
 
 	@Required
-    @ManyToOne
-    public Producto producto;
-
-	@Required
 	public int cantidad;	
 	
 	@Required
 	public Date fechaDeSalida;
 	
 	public String toString() {		
-		return producto.toString() +  " " + cantidad;
+		return String.valueOf(this.cantidad);
 	}
 
 }

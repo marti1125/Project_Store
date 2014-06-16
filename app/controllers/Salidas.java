@@ -11,7 +11,6 @@ import play.db.Model;
 import play.exceptions.TemplateNotFoundException;
 import play.mvc.*;
 
-@Check("admin")
 @With(Secure.class)
 public class Salidas extends CRUD{
 	
@@ -42,7 +41,7 @@ public static void create() throws Exception {
         
         salida = (Salida) object;  
         
-        producto = producto.findById(salida.producto.codigo);        
+        //producto = producto.findById(salida.producto.codigo);        
         //cantidadFinal = producto.cantidadInicial - salida.cantidad;
         if(cantidadFinal >= 0){
         	//producto.cantidadInicial = cantidadFinal;        

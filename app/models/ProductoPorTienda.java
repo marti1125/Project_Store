@@ -15,12 +15,8 @@ public class ProductoPorTienda extends Model {
     @ManyToOne
     public Tienda tienda;
 	
-	@Required
-    @ManyToOne
-    public Producto producto;
-	
 	public String toString(){
-		return this.tienda.toString() + " - " + this.producto.toString();
+		return this.tienda.toString();
 	}
 	
 }

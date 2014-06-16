@@ -12,7 +12,6 @@ import play.db.Model;
 import play.exceptions.TemplateNotFoundException;
 import play.mvc.*;
 
-@Check("admin")
 @With(Secure.class)
 public class Entradas extends CRUD{
 	

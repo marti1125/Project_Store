@@ -5,7 +5,6 @@ import play.mvc.With;
 import models.*;
 import java.util.List;
 
-@Check("admin")
 @With(Secure.class)
 @For(EstadoDelProducto.class)
 public class EstadosDeLosProductos extends CRUD {
