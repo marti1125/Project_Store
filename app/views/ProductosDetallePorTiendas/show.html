@@ -1,16 +1,17 @@
 #{extends 'main.html' /}
 #{set title:messages.get('crud.show.title', type.modelName) /}
+
 <div class="container"> 
     <div class="row">
         <div class="span12">
 
             <ul class="breadcrumb">
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/costos/list">Costos de Productos</a></li>
-                <li class="active">Actualizar Costo de Producto</li>
+                <li><a href="/productos/list">Productos</a></li>
+                <li class="active">Actualizar Producto</li>
             </ul>
-
-            <div id="crudShow" class="${type.name}">
+            
+            <div id="crudShow" class="${type.name}">                
 
                 <h2 id="crudShowTitle">&{'crud.show.title', type.modelName}</h2>
 
@@ -31,7 +32,6 @@
                 #{/form}
 
             </div>
-            
         </div>
     </div>
 </div>

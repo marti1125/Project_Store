@@ -2,8 +2,10 @@ package controllers;
 
 import java.lang.reflect.Constructor;
 
-import models.Salida;
+import models.EntradaDeProducto;
+import models.SalidaDeProducto;
 import models.Producto;
+import controllers.CRUD.For;
 import controllers.CRUD.ObjectType;
 import play.*;
 import play.data.binding.Binder;
@@ -12,11 +14,12 @@ import play.exceptions.TemplateNotFoundException;
 import play.mvc.*;
 
 @With(Secure.class)
+@For(SalidaDeProducto.class)
 public class Salidas extends CRUD{
 	
 public static void create() throws Exception {
 		
-		Salida salida = new Salida();
+		SalidaDeProducto salidaDeProducto = new SalidaDeProducto();
 		Producto producto = new Producto();
 		int cantidadFinal = 0;
 		
@@ -39,7 +42,7 @@ public static void create() throws Exception {
         
         // Resta a la cantidad inicial de la tabla productos
         
-        salida = (Salida) object;  
+        salidaDeProducto = (SalidaDeProducto) object;  
         
         //producto = producto.findById(salida.producto.codigo);        
         //cantidadFinal = producto.cantidadInicial - salida.cantidad;

@@ -19,7 +19,7 @@ public class Producto extends Model {
 	public String descripcion;
 	
 	public String toString() {
-		return this.descripcion;
+		return this.codigo + " - " + this.descripcion;
 	}
 	
 }

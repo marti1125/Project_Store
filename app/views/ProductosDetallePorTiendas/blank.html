@@ -1,13 +1,14 @@
 #{extends 'main.html' /}
 #{set title:messages.get('crud.blank.title', type.modelName) /}
+
 <div class="container"> 
     <div class="row">
         <div class="span12">
 
             <ul class="breadcrumb">
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/costos/list">Costos de Productos</a></li>
-                <li class="active">Nuevo Costo de Producto</li>
+                <li><a href="/productos/list">Productos</a></li>
+                <li class="active">Nuevo Producto</li>
             </ul>
 
             <div id="crudBlank" class="${type.name}">

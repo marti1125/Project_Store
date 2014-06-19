@@ -1,9 +1,7 @@
 package models;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
+
 import javax.persistence.*;
 
 import play.data.validation.*;
@@ -11,20 +9,20 @@ import play.data.binding.*;
 import play.db.jpa.*;
 
 @Entity
-public class Entrada extends Model{
-
+public class SalidaDeProducto extends Model{
+	
 	@Required
-    @ManyToOne
-    public Producto producto;
+	@ManyToOne
+	public ProductoDetalle productoDetalle;
 
 	@Required
 	public int cantidad;	
 	
 	@Required
-	public Date fechaDeEntrada;
+	public Date fechaDeSalida;
 	
-	public String toString() {
+	public String toString() {		
 		return String.valueOf(this.cantidad);
-	}	
-	
+	}
+
 }

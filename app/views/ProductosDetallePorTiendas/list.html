@@ -1,15 +1,15 @@
 #{extends 'main.html' /}
 #{set title:messages.get('crud.list.title', type.name) /}
 <div class="container">	
-	<div class="row">
+	<div class="row">	
 		<div class="span12">
 			
 			<ul class="breadcrumb">
 		    	<li><a href="/">Inicio</a></li>
-		    	<li class="active">Costos de Productos</li>
+		    	<li class="active">Productos</li>
 		    </ul>	
-		    
-			#{crud.search /}
+		
+		    #{crud.search /}	    
 			<br/><br/>
 		    <div id="crudListTable">
 		        #{crud.table /}

@@ -1,5 +1,5 @@
 #{extends 'main.html' /}
-#{set title:messages.get('crud.blank.title', type.modelName) /}
+#{set title:messages.get('crud.show.title', type.modelName) /}
 
 <div class="container"> 
     <div class="row">
@@ -7,24 +7,29 @@
 
             <ul class="breadcrumb">
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/productosportiendas/list">Productos Por Tiendas</a></li>
-                <li class="active">Agregar Producto a Tienda</li>
+                <li><a href="/productos/list">Productos</a></li>
+                <li class="active">Actualizar Producto</li>
             </ul>
+            
+            <div id="crudShow" class="${type.name}">                
 
-            <div id="crudBlank" class="${type.name}">
-
-                <h2 id="crudBlankTitle">&{'crud.blank.title', type.modelName}</h2>
+                <h2 id="crudShowTitle">&{'crud.show.title', type.modelName}</h2>
 
                 <div class="objectForm">
-                #{form action:@create(), enctype:'multipart/form-data'}
+                #{form action:@save(object._key()), enctype:'multipart/form-data'}
                     #{crud.form /}
                     <p class="crudButtons">
                         <input type="submit" class="btn btn-primary" name="_save" value="&{'crud.save', type.modelName}" />
                         <input type="submit" class="btn btn-primary" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />
-                        <input type="submit" class="btn btn-primary" name="_saveAndAddAnother" value="&{'crud.saveAndAddAnother', type.modelName}" />
                     </p>
                 #{/form}
                 </div>
+
+                #{form @delete(object._key())}
+                    <p class="crudDelete">
+                        <input type="submit" class="btn btn-primary" value="&{'crud.delete', type.modelName}" />
+                    </p>
+                #{/form}
 
             </div>
         </div>
