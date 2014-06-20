@@ -24,7 +24,7 @@ clave=Clave
 nombreCompleto=Nombre Completo
 esAdministrador= Es Administrador
 codigo=Código
-descripcion=Descripcion
+descripcion=Descripción
 cantidadInicial=Cantidad Inicial
 producto=Producto
 costo=Costo
@@ -35,10 +35,18 @@ fechaDeSalida=Fecha De Salida
 categoria=Categoria
 todosLasTiendas = Todos las Tiendas
 tienda = Tienda
+ProductosDetalles = Detalle del Producto
+proveedor=Proveedor
+fechaDeIngreso = Fecha de Ingreso
+ProductoDetalle = Detalle de Producto
+ProductosDetallePorTiendas= Productos por Tiendas
+ProductoDetallePorTienda=Producto por Tienda
+productoDetalle=Detalle del Producto
+EntradaDeProducto = Entrada de Producto
+SalidaDeProducto = Salida de Producto
 
 # Default CRUD messages
 # ~~~~~~
-
 crud.title=Administration
 crud.home=Home
 crud.blank=New
@@ -67,8 +75,8 @@ crud.saved=The &{%s} has been saved
 crud.deleted=The &{%s} has been deleted
 crud.delete.error=Cannot delete this object
 crud.search= Buscar
-crud.none=(None)
-crud.selectValue=(Seleccionar)
+crud.none=(Ninguno)
+crud.selectValue=-- Seleccionar --
 
 crud.help.required=Requerido.
 crud.help.minlength=Min length is %d.

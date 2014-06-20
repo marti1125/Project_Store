@@ -85,7 +85,7 @@
         #{if field.type == 'hidden'}
             #{crud.hiddenField name:field.name, value:(currentObject ? currentObject[field.name] : null) /}
         #{/if}
-
+	
     <span class="crudHelp">
         &{am}
             %{ play.data.validation.Validation.getValidators(currentType.entityClass, fieldName, 'object').each() { }%
@@ -130,9 +130,9 @@
                 }%
             %{ } }%
     </span>
-
+	
     %{ } }%
 
 </div>
-
+<br/>
 #{/list}

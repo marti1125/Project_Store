@@ -2,11 +2,10 @@
     #{if _fields}
         <input type="hidden" name="searchFields" value="${_fields.toString().substring(1, _fields.toString().length()-1).replace(',', '')}" />
     #{/if}
-    <div class="row">
-    <div class="col-xs-3">
+    <div class="col-md-4">
     	<input type="text" class="input-medium search-query form-control" name="search" value="${params.search?.escape()?.raw()}" />
     </div>
-    <div class="col-xs-3">
+    <div class="col-md-4">
     	<input type="submit" class="btn" value="&{'crud.search'}" />
     </div>
     #{if _caller.params.search}
