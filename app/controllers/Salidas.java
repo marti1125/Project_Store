@@ -2,9 +2,8 @@ package controllers;
 
 import java.lang.reflect.Constructor;
 
-import models.EntradaDeProducto;
 import models.SalidaDeProducto;
-import models.Producto;
+import models.ProductoDetalle;
 import controllers.CRUD.For;
 import controllers.CRUD.ObjectType;
 import play.*;
@@ -20,7 +19,7 @@ public class Salidas extends CRUD{
 public static void create() throws Exception {
 		
 		SalidaDeProducto salidaDeProducto = new SalidaDeProducto();
-		Producto producto = new Producto();
+		ProductoDetalle productoDetalle = new ProductoDetalle();
 		int cantidadFinal = 0;
 		
         ObjectType type = ObjectType.get(getControllerClass());
@@ -44,11 +43,12 @@ public static void create() throws Exception {
         
         salidaDeProducto = (SalidaDeProducto) object;  
         
-        //producto = producto.findById(salida.producto.codigo);        
-        //cantidadFinal = producto.cantidadInicial - salida.cantidad;
+        productoDetalle = productoDetalle.findById(salidaDeProducto.productoDetalle);        
+        cantidadFinal = productoDetalle.cantidad - salidaDeProducto.cantidad;
+        
         if(cantidadFinal >= 0){
-        	//producto.cantidadInicial = cantidadFinal;        
-            producto.save();
+        	productoDetalle.cantidad = cantidadFinal;        
+            productoDetalle.save();
             System.out.println("ya no tiene productos");
             
             object._save();

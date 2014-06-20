@@ -14,6 +14,10 @@ public class SalidaDeProducto extends Model{
 	@Required
 	@ManyToOne
 	public ProductoDetalle productoDetalle;
+	
+	@Required
+    @ManyToOne
+    public Tienda tienda;
 
 	@Required
 	public int cantidad;	
