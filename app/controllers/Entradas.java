@@ -3,7 +3,7 @@ package controllers;
 import java.lang.reflect.Constructor;
 
 import models.EntradaDeProducto;
-import models.Producto;
+import models.ProductoDetalle;
 
 import controllers.CRUD.*;
 import play.*;
@@ -19,7 +19,7 @@ public class Entradas extends CRUD{
 	public static void create() throws Exception {
 		
 		EntradaDeProducto entradaDeProducto = new EntradaDeProducto();
-		Producto producto = new Producto();
+		ProductoDetalle productoDetalle = new ProductoDetalle();
 		int cantidadFinal = 0;
 		
         ObjectType type = ObjectType.get(getControllerClass());
@@ -43,11 +43,11 @@ public class Entradas extends CRUD{
         
         entradaDeProducto = (EntradaDeProducto) object;  
         
-        //producto =  producto.findById(entradaDeProducto.producto.codigo);        
-        //cantidadFinal = producto.cantidadInicial + entrada.cantidad;
-        //producto.cantidadInicial = cantidadFinal;
+        productoDetalle =  productoDetalle.findById(entradaDeProducto.productoDetalle);        
+        cantidadFinal = productoDetalle.cantidad + entradaDeProducto.cantidad;
+        productoDetalle.cantidad = cantidadFinal;
         
-        producto.save();
+        productoDetalle.save();
         
         //System.out.println(producto.cantidadInicial);        
         
