@@ -31,4 +31,6 @@ public class ProductoDetalle extends Model {
 	@Required
 	public Date fechaDeIngreso;
 	
+	public boolean activo;
+	
 }
