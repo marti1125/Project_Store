@@ -18,7 +18,7 @@
                 #{form action:@create(), enctype:'multipart/form-data'}
                 
                 #{if flash.error}
-					<div class="alert">
+					<div class="alert alert-danger">
 		                <button type="button" class="close" data-dismiss="alert">&times;</button>
 		                &{flash.error}                  
 		            </div>

@@ -4,6 +4,10 @@ import java.util.Date;
 
 import javax.persistence.*;
 
+import org.joda.time.LocalDateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
 import play.data.validation.Required;
 import play.db.jpa.Model;
 
@@ -32,5 +36,13 @@ public class ProductoDetalle extends Model {
 	public Date fechaDeIngreso;
 	
 	public boolean activo;
+	
+	public String toString(){
+		DateTimeFormatter formatterHora = DateTimeFormat.forPattern("dd/MM/yyyy");
+		LocalDateTime localDateTime = new LocalDateTime(this.fechaDeIngreso);
+		return "Producto: " + this.producto.descripcion + " Cantidad: " + this.cantidad + 
+				" Fecha de Ingreso: " + localDateTime.toString(formatterHora) + "" +
+						" Costo: " + this.costo.toString();
+	}
 	
 }

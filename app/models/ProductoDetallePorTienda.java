@@ -16,7 +16,7 @@ public class ProductoDetallePorTienda extends Model {
     public Tienda tienda;
 	
 	public String toString(){
-		return this.tienda.toString();
+		return "Producto: " + this.productoDetalle.producto.descripcion+" Tienda:  "+this.tienda.toString();
 	}
 	
 }
