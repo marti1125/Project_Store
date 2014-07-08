@@ -39,6 +39,7 @@ public class Usuario extends Model{
 		String adm = "";
 		if(esAdministrador){
 			adm = "(Administrador)";
+			System.out.println("Validando....");
 		}
 		return nombreCompleto + ' ' + adm;
 	}
