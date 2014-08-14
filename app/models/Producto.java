@@ -8,8 +8,9 @@ import play.data.binding.*;
 import play.db.jpa.*;
 
 @Entity
-public class Producto extends Model {
+public class Producto extends GenericModel {
 	
+	@Id
 	@Required
 	public String codigo;
 	

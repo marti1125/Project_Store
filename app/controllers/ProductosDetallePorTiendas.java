@@ -5,7 +5,7 @@ import play.mvc.With;
 import models.*;
 
 @With(Secure.class)
-@For(ProductoDetallePorTienda.class)
+@For(TiendaProductoDetalle.class)
 public class ProductosDetallePorTiendas extends CRUD{
 
 }

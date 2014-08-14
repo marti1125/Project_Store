@@ -28,11 +28,4 @@ public class EntradaDeProducto extends Model{
 	@Required
 	public Date fechaDeEntrada;
 	
-	public String toString() {
-		DateTimeFormatter formatterHora = DateTimeFormat.forPattern("dd/MM/yyyy");
-		LocalDateTime localDateTime = new LocalDateTime(this.fechaDeEntrada);
-		return "Producto: " + this.productoDetalle.producto.descripcion + " Cantidad: "+
-				String.valueOf(this.cantidad) + " Fecha: " +  localDateTime.toString(formatterHora);
-	}	
-	
 }

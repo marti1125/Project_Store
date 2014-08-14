@@ -7,11 +7,11 @@ import play.db.jpa.GenericModel;
 import play.db.jpa.Model;
 
 @Entity
-public class Tienda extends GenericModel {
+public class Distribuidor extends GenericModel {
 	
 	@Id
 	@Required
-	public String codigo;
+	public int ruc;
 	
 	public String nombre;
 	
@@ -20,7 +20,7 @@ public class Tienda extends GenericModel {
 	public String telefono;
 	
 	@ManyToOne
-	public Usuario usuario;
+	public Vendedor vendedor;
 	
 	public String toString(){
 		return this.nombre;

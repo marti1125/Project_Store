@@ -75,8 +75,11 @@ public class Secure extends Controller {
     	Usuario usuario = Usuario.find("usuario = ? and clave = ?", username, password).first();
     	
     	if(usuario != null){
-    		session.put("nombreCompleto", usuario.nombreCompleto);
-    		session.put("idUsuario", usuario.id);
+    		//session.put("nombreCompleto", usuario.nombreCompleto);
+    		//session.put("idUsuario", usuario.id);
+    		//if(usuario.tienda != null){
+    			//session.put("idTienda", usuario.id);
+    		//}
     		//allowed = true;
     	} else {
     		flash.keep("url");

@@ -19,30 +19,19 @@ public class ProductoDetalle extends Model {
 	public Producto producto;
 	
 	@Required
-	@ManyToOne
-	public Categoria categoria;
-	
-	@Required
-	@ManyToOne
-	public Proveedor proveedor;
-	
-	@Required
 	public int cantidad;
 	
 	@Required
 	public Double costo;
 	
 	@Required
+	public Double precioVenta;
+	
+	@Required
 	public Date fechaDeIngreso;
 	
-	public boolean activo;
-	
-	public String toString(){
-		DateTimeFormatter formatterHora = DateTimeFormat.forPattern("dd/MM/yyyy");
-		LocalDateTime localDateTime = new LocalDateTime(this.fechaDeIngreso);
-		return "Producto: " + this.producto.descripcion + " Cantidad: " + this.cantidad + 
-				" Fecha de Ingreso: " + localDateTime.toString(formatterHora) + "" +
-						" Costo: " + this.costo.toString();
-	}
+	@Required
+	@ManyToOne
+	public Distribuidor distribuidor;
 	
 }

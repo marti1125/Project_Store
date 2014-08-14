@@ -5,7 +5,6 @@ import java.util.List;
 import enums.Estado;
 
 import models.Producto;
-import models.EstadoDelProducto;
 import play.jobs.*;
 
 //@Every("1mn")

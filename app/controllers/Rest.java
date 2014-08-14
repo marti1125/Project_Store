@@ -25,12 +25,12 @@ public class Rest extends Controller {
 		renderJSON(mapper.writeValueAsString(productos));		
 	}
 	
-	public static void listaDeProductosFaltantes() throws Exception {
+	/*public static void listaDeProductosFaltantes() throws Exception {
 		response.headers.put("Access-Control-Allow-Origin", new Header("Access-Control-Allow-Origin", "*"));
 		List<EstadoDelProducto> productosFaltantes = EstadoDelProducto.findAll();
 		org.codehaus.jackson.map.ObjectMapper mapper = new ObjectMapper();		
 		renderJSON(mapper.writeValueAsString(productosFaltantes));		
-	}
+	}*/
 	
 	public static void buscarProducto(String codigo) throws Exception {
 		response.headers.put("Access-Control-Allow-Origin", new Header("Access-Control-Allow-Origin", "*"));

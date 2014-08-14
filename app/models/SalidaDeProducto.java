@@ -20,20 +20,9 @@ public class SalidaDeProducto extends Model{
 	public ProductoDetalle productoDetalle;
 	
 	@Required
-    @ManyToOne
-    public Tienda tienda;
-
-	@Required
 	public int cantidad;	
 	
 	@Required
 	public Date fechaDeSalida;
 	
-	public String toString() {
-		DateTimeFormatter formatterHora = DateTimeFormat.forPattern("dd/MM/yyyy");
-		LocalDateTime localDateTime = new LocalDateTime(this.fechaDeSalida);
-		return "Producto: " + this.productoDetalle.producto.descripcion + " Cantidad: "+
-				String.valueOf(this.cantidad) + " Fecha: " +  localDateTime.toString(formatterHora);
-	}	
-
 }
