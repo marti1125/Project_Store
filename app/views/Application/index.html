@@ -1,191 +1,26 @@
 #{extends 'main.html' /}
 #{set title:'Gestion de Tienda' /}
 
-
-#{if usuario.esAdministrador}
-
+<br/><br/>
 <div class="container">	
-	<div class="row">		
-		<div class="col-md-12">
-			<ul class="breadcrumb">
-		    	<li><a href="#"><i class="fa fa-cogs"></i> Mantenimiento</a></li>		    
-		    </ul>		
-		</div>
-		<div class="col-md-12">
-			<div class="col-md-2 center">
-		    	<a href="usuarios/list">		    	
-		    		<img src="@{'/public/img/usuarios.png'}" />	    	
-		    	</a><br/>
-		    	Usuarios <span class="badge">0</span>
-		    </div>
-		    <div class="col-md-2 center">
-		    	<a href="tiendas/list">		    	
-		    		<img src="@{'/public/img/tiendas.png'}" />	    	
-		    	</a><br/>
-		    	Tiendas  <span class="badge">1</span>
-		    </div>
-		    <div class="col-md-2 center">
-		    	<a href="proveedores/list">		    	
-		    		<img src="@{'/public/img/tiendas.png'}" />	    	
-		    	</a><br/>
-		    	Proveedores <span class="badge">2</span>
-		    </div>
-		    
-		    <div class="col-md-2 center">
-		    	<a href="categorias/list">		    	
-		    		<img src="@{'/public/img/categorias.png'}" />	    	
-		    	</a><br/>
-		    	Categorias <span class="badge">3</span>
-		    </div>
-		    
-		    <div class="col-md-2 center">
-		    	<a href="productos/list">		    	
-		    		<img src="@{'/public/img/productos.png'}" />	    	
-		    	</a><br/>
-		    	Productos <span class="badge">4</span>
-		    </div>
-		    <div class="col-md-2 center">
-		    	<a href="productosdetalles/list">		    	
-		    		<img src="@{'/public/img/productos.png'}" />	    	
-		    	</a><br/>
-		    	Detalle del Producto <span class="badge">5</span>
-		    </div>
-		    
-		</div>
-		<div class="col-md-12">
-			<div class="col-md-2 center">
-		    	<a href="productosdetalleportiendas/list">		    	
-		    		<img src="@{'/public/img/productos.png'}" />	    	
-		    	</a><br/>
-		    	Productos por Tiendas <span class="badge">6</span>
-		    </div>
-		</div>
-		
-		<div class="col-md-12">
-			<br/>
-			<ul class="breadcrumb">
-		    	<li><a href="#"><i class="fa fa-exchange"></i> Registro</a></li>		    
-		    </ul>	
-		</div>
-		<div class="col-md-12">
-			<div class="col-md-2 center">
-		    	<a href="entradas/list">
-		    	<img src="@{'/public/img/ingreso.png'}" />	    	
-		    	</a><br/>
-		    	Ingreso de Productos
-			</div>
-		    <div class="col-md-2 center">
-		    	<a href="salidas/list">		    	
-		    		<img src="@{'/public/img/salida.png'}" />	    	
-		    	</a><br/>
-		    	Salida de Productos
-		    </div>
-		</div>
-		<div class="col-md-12">
-			<br/>
-			<ul class="breadcrumb">
-		    	<li><a href="#"><i class="fa fa-cloud"></i> Servicios</a></li>		    
-		    </ul>	
-		</div>
-		<div class="col-md-12">
-            <table class="table table-bordered table-striped table-hover">
-            	<tr>
-            		<th>Nombre</th>
-            		<th>Url</th>
-            	</tr>
-            	<tr>
-            		<td>Lista de Tiendas</td>
-            		<td><a href="/listaDeTiendas" target="_blank" class="btn btn-success btn-small">GET</a> /listaDeTiendas</td>
-            	</tr>
-            	<tr>
-            		<td>Lista de Productos</td>
-            		<td><a href="/buscarProducto?codigo=" target="_blank" class="btn btn-success btn-small">GET</a> /buscarProducto?codigo=</td>
-            	</tr>
-            	<tr>
-            		<td>Lista de Productos</td>
-            		<td><a href="/listaDeProductos" target="_blank" class="btn btn-success btn-small">GET</a> /listaDeProductos</td>
-            	</tr>
-            	<tr>
-            		<td>Lista de Productos Faltantes</td>
-            		<td><a href="/listarProductosFaltantes" target="_blank" class="btn btn-success btn-small">GET</a> /listarProductosFaltantes</td>
-            	</tr>
-            </table>
-        </div> 
-	</div>
-</div>
-
-#{/if}
-#{else}
-
-<div class="container">	
-	<div class="row">		
-		<div class="col-md-12">
-			<ul class="breadcrumb">
-		    	<li><a href="#"><i class="fa fa-cogs"></i> Mantenimiento</a></li>		    
-		    </ul>		
-		</div>
-		<div class="col-md-12">
-		    <div class="col-md-2 center">
-		    	<a href="tiendas/list">		    	
-		    		<img src="@{'/public/img/tiendas.png'}" />	    	
-		    	</a><br/>
-		    	Tiendas  <span class="badge">1</span>
-		    </div>
-		    <div class="col-md-2 center">
-		    	<a href="proveedores/list">		    	
-		    		<img src="@{'/public/img/tiendas.png'}" />	    	
-		    	</a><br/>
-		    	Proveedores <span class="badge">2</span>
-		    </div>
-		    
-		    <div class="col-md-2 center">
-		    	<a href="categorias/list">		    	
-		    		<img src="@{'/public/img/categorias.png'}" />	    	
-		    	</a><br/>
-		    	Categorias <span class="badge">3</span>
-		    </div>
-		    
-		    <div class="col-md-2 center">
-		    	<a href="productos/list">		    	
-		    		<img src="@{'/public/img/productos.png'}" />	    	
-		    	</a><br/>
-		    	Productos <span class="badge">4</span>
-		    </div>
-		    <div class="col-md-2 center">
-		    	<a href="productosdetalles/list">		    	
-		    		<img src="@{'/public/img/productos.png'}" />	    	
-		    	</a><br/>
-		    	Detalle del Producto <span class="badge">5</span>
-		    </div>
-		    <div class="col-md-2 center">
-		    	<a href="productosdetalleportiendas/list">		    	
-		    		<img src="@{'/public/img/productos.png'}" />	    	
-		    	</a><br/>
-		    	Productos por Tiendas <span class="badge">6</span>
-		    </div>
-		</div>
-		<div class="col-md-12">
-			<br/>
-			<ul class="breadcrumb">
-		    	<li><a href="#"><i class="fa fa-exchange"></i> Registro</a></li>		    
-		    </ul>	
-		</div>
-		<div class="col-md-12">
-			<div class="col-md-2 center">
-		    	<a href="entradas/list">
-		    	<img src="@{'/public/img/ingreso.png'}" />	    	
-		    	</a><br/>
-		    	Ingreso de Productos
-			</div>
-		    <div class="col-md-2 center">
-		    	<a href="salidas/list">		    	
-		    		<img src="@{'/public/img/salida.png'}" />	    	
-		    	</a><br/>
-		    	Salida de Productos
-		    </div>
+	<div class="row">	
+		<div class="col-md-3">
+			<ul class="nav nav-pills nav-stacked">
+  				<li class="active"><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
+  				<li><hr/></li>
+  				<li><h5>Moviento de Productos</h5></li>
+  				<li><a href="#"><i class="fa fa-arrow-left"></i> Ingreso</a></li>
+  				<li><a href="#"><i class="fa fa-arrow-right"></i> Salida</a></li>
+  				<li><hr/></li>
+  				<li><a href="#"><i class="fa fa-cubes"></i> Productos</a></li>
+  				<li><a href="#"><i class="fa fa-building-o"></i> Tiendas</a></li>
+  				<li><hr/></li>
+  				<li><a href="#"><i class="fa fa-briefcase"></i> Vendedores</a></li>
+  				<li><a href="#"><i class="fa fa-truck"></i> Distribuidores</a></li>
+  				<li><hr/></li>
+  				<li><a href="#"><i class="fa fa-users"></i> Usuarios</a></li>
+			</ul>
 		</div>
 	</div>
 </div>
 
-
-#{/else}
