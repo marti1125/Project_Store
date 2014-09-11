@@ -13,7 +13,8 @@ var Usuarios = Backbone.PageableCollection.extend({
 
 var usuarios = new Usuarios();
 
-var columns = [{
+var columns = [
+   {
     name: "usuario",
     label: "Usuario",
     editable: false,
@@ -37,8 +38,28 @@ var columns = [{
     name: "esAdministrador",
     label: "¿Es Administrador?",
     editable: false,
-    cell: "string"
-}];
+    cell: Backgrid.Cell.extend({
+		 render: function () {
+	 		if(this.model.attributes['esAdministrador']){
+ 		 		this.$el.html('<i class="fa fa-check"></i>');
+ 		 	} else {
+ 		 		this.$el.html('');
+ 		 	}
+	 		return this;
+		 }  
+     })
+  }, {
+	name: "actualizar",
+	label: "Actualizar",
+	editable: false,
+	cell: Backgrid.Cell.extend({
+		 render: function () {	 		
+		 	this.$el.html('<a href="#" class="btn btn-primary"><i class="fa fa-pencil-square-o"></i></a>');
+	 		return this;
+		 }  
+    })
+  }
+];
 
 // Initialize a new Grid instance
 var grid = new Backgrid.Grid({
