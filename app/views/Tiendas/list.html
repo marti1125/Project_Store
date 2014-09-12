@@ -1,28 +1,35 @@
 #{extends 'main.html' /}
 #{set title:messages.get('crud.list.title', type.name) /}
-<div class="container">	
+<div class="container">
 	<div class="row">	
-		<div class="span12">
-			
-			<ul class="breadcrumb">
-		    	<li><a href="/">Inicio</a></li>
-		    	<li class="active">Tiendas</li>
-		    </ul>	
-		
-		    #{crud.search /}	    
-			<br/><br/>
-		    <div id="crudListTable">
-		        #{crud.table /}
-		    </div>
-		
-		    <div id="crudListPagination">
-		        #{crud.pagination /}
-		    </div>
-		
-		    <p id="crudListAdd">
-		        <a href="@{blank()}" class="btn btn-primary">&{'crud.add', type.modelName}</a>
-		    </p>
-		
+		<div class="col-md-3">
+			<ul class="nav nav-pills nav-stacked">
+	 				<li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
+	 				<li><hr/></li>
+	 				<li><h5>Moviento de Productos</h5></li>
+	 				<li><a href="#"><i class="fa fa-arrow-left"></i> Ingreso</a></li>
+	 				<li><a href="#"><i class="fa fa-arrow-right"></i> Salida</a></li>
+	 				<li><hr/></li>
+	 				<li><a href="#"><i class="fa fa-cubes"></i> Productos</a></li>
+	 				<li class="active"><a href="#"><i class="fa fa-building-o"></i> Tiendas</a></li>
+	 				<li><hr/></li>
+	 				<li><a href="#"><i class="fa fa-briefcase"></i> Vendedores</a></li>
+	 				<li><a href="#"><i class="fa fa-truck"></i> Distribuidores</a></li>
+	 				<li><hr/></li>
+	 				<li><a href="#"><i class="fa fa-users"></i> Usuarios</a></li>
+			</ul>
 		</div>
-	</div>
+		<div class="col-md-9">
+			<p id="crudListAdd">
+		        <a href="@{blank()}" class="btn btn-primary"><i class="fa fa-plus"></i> Añadir</a>
+		    </p>
+		    <div id="filtro"></div>
+		    <div id="backgrid"></div>
+		    <div id="paginator"></div>
+		    <p id="crudListAdd">
+		        <a href="#" class="btn btn-danger"><i class="fa fa-times"></i> Retirar</a>
+		    </p>
+		</div>
+	</div>	
 </div>
+<script src="@{'/public/js/model/tienda.js'}" type="text/javascript" charset="${_response_encoding}"></script>
