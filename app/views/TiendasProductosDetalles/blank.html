@@ -1,0 +1,32 @@
+#{extends 'main.html' /}
+#{set title:messages.get('crud.blank.title', type.modelName) /}
+
+<div class="container"> 
+    <div class="row">
+        <div class="span12">
+
+            <ul class="breadcrumb">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productosdetalleportiendas/list">Productos por Tiendas </a></li>
+                <li class="active">Nuevo Producto por Tienda</li>
+            </ul>
+
+            <div id="crudBlank" class="${type.name}">
+
+                <h2 id="crudBlankTitle">&{'crud.blank.title', type.modelName}</h2>
+
+                <div class="objectForm">
+                #{form action:@create(), enctype:'multipart/form-data'}
+                    #{crud.form /}
+                    <p class="crudButtons">
+                        <input type="submit" class="btn btn-primary" name="_save" value="&{'crud.save', type.modelName}" />
+                        <input type="submit" class="btn btn-primary" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />
+                        <input type="submit" class="btn btn-primary" name="_saveAndAddAnother" value="&{'crud.saveAndAddAnother', type.modelName}" />
+                    </p>
+                #{/form}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
