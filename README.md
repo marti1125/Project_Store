@@ -24,7 +24,7 @@ Para hacer deploy en Cloudbees:
 * cd store
 * en application.conf agregar la dirección de la base de datos db=mysql://root:mysql@localhost:3306/database_name
 * bees run (para probar si todo esta correcto)
-* play war Project_Store -o project_store --zip
+* play war Project_Store -o project_store.war --zip
 * copiar la carpeta project_stor\WEB-INF a C:\Users\Willy\store\webapp\
 * bees deploy -a projectstore/store
 
