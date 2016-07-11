@@ -1,5 +1,5 @@
 Usuario(esAdministrador):
-    usuario: admin
-    clave: secret
-    apPaterno: Aguirre
-    esAdministrador: true
+  usuario: admin
+  clave: secret
+  apPaterno: Aguirre
+  esAdministrador: true
